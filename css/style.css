@@ -1,0 +1,559 @@
+/* HUBBALLI Letra SIN SERIFA, se usa con: 
+font-family: 'Hubballi', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
+/* ------------------------------------- */
+
+/* DANCING SCRIPT letra DISPLAY, ILUSTRATIVA
+font-family: 'Dancing Script', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+/* 
+font-family: 'Indie Flower', cursive */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONFIGURACION GENERAL DE FUENTES Y TAMAÑOS */
+:is(h2) {
+    font-size: 2.5rem;
+    font-family: 'Indie Flower', cursive;
+
+}
+:is(h3) {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+}
+:is(p, .footer-entregas, .footer-contactenos) {
+    font-family: 'Hubballi', cursive;
+    font-size: 1.5rem;
+}
+
+/* HEADER */
+header{
+    background-color: #f9e1f9 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Header que te siga cuando scroleas */
+    position: sticky;
+    top: 0rem;
+    width: 100%;
+    height: 7.5rem;
+    opacity: 88%;
+}
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 4.375rem;
+    padding-right: 4.375rem;
+}
+header ul li a{
+    text-decoration: none;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #c54de3;
+}
+header h1{
+    font-size: 2.8125rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    line-height: 2.5rem;
+    text-align: center;
+    color: #ba18c0;
+}
+.titulo-header{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+
+/* FOOTER */
+footer{
+    background-color: #FFD6FF;
+    display: grid;
+    grid-template-rows: 1fr 20%;
+    grid-template-columns: 1fr 40% 1fr;
+    grid-template-areas: 
+    "parrafo iconos contactenos"
+    "copy copy copy"
+    ;
+    height: 15.625rem;
+}
+:is(.footer-entregas, .footer-contactenos){
+    align-self: center;
+    justify-self: center;
+    font-size: 2rem;
+}
+.footer-entregas{
+    grid-area: parrafo;
+}
+.footer-iconos{
+    grid-area: iconos;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.125rem;
+}
+.footer-contactenos{
+    grid-area: contactenos;
+}
+.footer-copy{
+    grid-area: copy;
+    justify-self: center;
+    align-self: end;
+}
+.footer-contactenos a{
+    color: black;
+    text-decoration: underline #816FB3;
+}
+footer a img{
+    width: 6rem;
+}
+.footer-entregas p{
+    font-size: 2.25rem;
+}
+/* INDEX HTML */
+/* MAIN */
+.background img{
+    width: 100%;
+    height: 37.5rem;
+    object-fit: cover;
+}
+
+/* SECTION DESCRIPCION */
+.descripcion{
+    display: flex;
+    align-items: center;
+    margin: 3.75rem 0;
+}
+.text-descripcion{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo-descripcion{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-right: 5.3125rem;
+}
+.titulo-descripcion h2{
+    width: 35.0625rem;
+    text-decoration: underline;
+    text-decoration-color: #B8C0FF;
+    order: 2;
+}
+.text-descripcion img{
+    width: 9.25rem;
+    padding-right: 2.1875rem;
+    order: 1;
+}
+.parrafo-descripcion{
+    text-align: center;
+    padding: 3.125rem 6.25rem;
+}
+.descripcion button{
+    background-color: #FFF392;
+    font-size: 1.375rem;
+    width: 16.25rem;
+    height: 2.8125rem;
+    font-weight: bold;
+    font-family: 'Hubballi', cursive;
+    border: .125rem solid #DDD1FF;
+    border-radius: .3125rem;
+}
+.descripcion button a{
+    text-decoration: none;
+}
+.img-descripcion{
+    display: flex;
+    width: 40%;
+    justify-content: center;
+}
+.img-descripcion img{
+    border-radius: 50%;
+    width: 37.5rem;
+    height: 37.5rem;
+    object-fit: cover;
+}
+
+/* SECTION TIPOS PRODUCTO */
+.tipos-de-productos{
+    background-color: #B8C0FF;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-bottom: 3.75rem;
+    padding: 1.875rem 0rem;
+}
+.t-prod-titulo-imagen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.t-prod-titulo-imagen h3{
+    font-size: 2.25rem;
+    padding-bottom: .625rem;
+    text-decoration: underline;
+}
+.tipos-de-productos img{
+    border-radius: 50%;
+    width: 28.125rem;
+    height: 28.125rem;
+    object-fit: cover;
+}
+
+/* SECTION DIAS PEDIDOS */
+.dias-pedidos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3.75rem;
+}
+.titulo-d-pedidos{
+    padding-bottom: 3.75rem;
+}
+.titulo-d-pedidos h2{
+    text-align: center;
+}
+.iconos-d-pedidos{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+.dias-pedidos img{
+    width: 6rem;
+}
+
+/* HTML NOSOTROS */
+.nosotros{
+    margin: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.t-nosotros{
+    display: flex;
+    justify-content: center;
+}
+.vid-des-nosotros{
+    display: flex;
+    justify-content: center;
+}
+.nosotros h2{
+    text-decoration: underline;
+    padding-bottom: 1.25rem;
+}
+.video-nosotros video{
+    width: 37.5rem;
+    height: 37.5rem;
+    display: flex;
+    margin-right: 7.5rem;
+    border-radius: 1.75rem;
+    object-fit: contain;
+}
+.descripcion-nosotros img{
+    width: 4.0625rem;
+}
+.descripcion-nosotros{
+    padding: .9375rem;
+    width: 40%;
+    border: .625rem #BBD0FF;
+    border-radius: 1.75rem;
+    box-shadow: .9375rem .9375rem .625rem #FFD6FF;
+    border-style:dotted;
+    text-align: center;
+    line-height: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* NOSOTROS LUGAR */
+.lugar{
+    background-color: #B8C0FF;
+    margin: 2.25rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 0;
+}
+.lugar h2{
+    text-decoration: underline;
+    padding-bottom: .5rem;
+}
+.lugar p{
+    font-weight: bold;
+    font-size: 1.75rem;
+    padding-top: .5rem;
+}
+.lugar iframe{
+    width: 60rem;
+    height: 40rem;
+    border-radius: 3.75rem 3.75rem;
+}
+
+
+/* HTML TALLER */
+.taller{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6.5rem 0rem;
+}
+.taller h2{
+    text-decoration: underline;
+    padding-bottom: 2.8125rem;
+}
+.taller video{
+    width: 700px;
+    height: 700px;
+    object-fit: cover;
+    border: .3125rem
+}
+.taller p{
+    padding-top: 2.8125rem;
+    width: 60%;
+    text-align: center;
+    font-style: italic;
+}
+
+/* HTML PRODUCTOS */
+
+.titulo-productos{
+    display: flex;
+    justify-content: center;
+}
+.titulo-productos h2{
+    text-decoration: underline;
+    font-size: 2.625rem;
+    margin: 3.75rem 0rem;
+    font-style: italic;
+}
+.descripcion-productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    justify-items: center;
+}
+.descripcion-productos-1{
+    display: grid;
+    grid-template-rows: 12% 1fr 85%;
+    align-items: center;
+    text-align: center;
+    height: 50rem;
+}
+.descripcion-productos-1 p{
+    align-self: baseline;
+}
+.descripcion-productos img{
+    width: 34.375rem;
+    height: 34.375rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.descripcion-productos h3{
+    color: #744ee6;
+    font-size: 2.25rem;
+}
+
+/* HTML CONTACTO */
+
+/* Declaramos la Grilla Principal */
+.contacto-grids{
+    display: grid;
+    grid-template-rows: 10% 1fr;
+    grid-template-columns: 40% 60%;
+    height: 50rem;
+}
+.titulo-contacto{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    justify-self: center;
+    align-self: center;
+}
+
+/* Se declara la Grila Secundaria */
+.info-personal{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 70% 1fr;
+    grid-template-rows: 10% repeat(2, 1fr) 40%;
+    height: 100%;
+}
+.info-personal-fila{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: start;
+    gap: 1.5625rem;
+}
+.telefono{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+.email{
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+
+/* Se declara la Grila Secundaria */
+.formulario{
+    display: grid;
+    padding: .9375rem;
+}
+form{
+    display: grid;
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: 5% 80% 5%;
+    border: .3125rem dashed #BBD0FF;
+
+}
+.formulario form fieldset{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+.formulario-grids{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 30% 60%;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+fieldset{
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+:is(.formulario-nombre, .formulario-email, .formulario-mensaje label textarea) label input{
+    width: 85%;
+    height: 25%;
+    font-size: 1.625rem;
+    font-family: 'Hubballi', cursive;
+    text-align: center;
+}
+.formulario-mensaje label textarea{
+    width: 100%;
+}
+form fieldset legend{
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    justify-self: left;
+}
+.formulario-nombre{
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+}
+.formulario-email{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    width: 100%;
+    height: 100%;
+}
+.formulario-tipo-mensaje{
+    width: 100%;
+    height: 100%;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+.formulario-tipo-mensaje-label{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: 12% repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+:is(.formulario-consultas, .formulario-pedidos, .formulario-productos, .formulario-otros){
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    width: 50%;
+}
+:is(.formulario-consultas, .formulario-pedidos, .formulario-productos, .formulario-otros) label{
+    grid-column: 1 / 2;
+}
+:is(.formulario-consultas, .formulario-pedidos, .formulario-productos, .formulario-otros) input{
+    grid-column: 2 / 3;
+}
+.formulario-tipo-mensaje-label span{
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    align-self: baseline;
+}
+.formulario-tipo-mensaje-label label input{
+    display: flex;
+    justify-content: center;
+}
+.formulario-mensaje{
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+}
+.boton-enviar{
+    background-color: #C8B6FF;
+    font-size: 1.375rem;
+    width: 6.5rem;
+    height: 2.1875rem;
+    font-weight: bold;
+    font-family: 'Hubballi', cursive;
+    text-transform: capitalize;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    justify-self: center;
+    width: 60%;
+    border: .1875rem double #FFF392;
+}
+.titulo-contacto h2{
+    text-decoration: underline;
+    font-size: 2.5rem;
+}
+.info-personal img{
+    width: 4.125rem;
+}
+.info-personal h3{
+    font-size: 1.625rem;
+}
+.formulario legend{
+    font-size: 2.25rem;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    color: #784dc8;
+}
+.formulario span{
+    font-size: 24px;
+    font-family: 'Hubballi', cursive;
+    font-weight: bold;
+}
+form fieldset label span{
+    display: flex;
+    flex-direction: column;
+}
+.contacto-background img{
+    width: 100%;
+    height: 50rem;
+    object-fit: cover;
+}
