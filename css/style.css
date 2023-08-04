@@ -36,6 +36,9 @@ font-family: 'Indie Flower', cursive */
 }
 
 /* HEADER */
+.redes-header{
+    display: none;
+}
 header{
     background-color: #f9e1f9 ;
     display: flex;
@@ -46,7 +49,7 @@ header{
     position: sticky;
     top: 0rem;
     width: 100%;
-    height: 7.5rem;
+    height: 7rem;
     opacity: 88%;
 }
 header ul{
@@ -74,6 +77,9 @@ header h1{
     display: flex;
     justify-content: center;
     width: 20%;
+}
+.nav-toggle{
+    display: none;
 }
 
 /* FOOTER */
@@ -585,7 +591,7 @@ form fieldset label span{
     }
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1150px){
     /* HEADER */
     header h1{
         font-size: 2.4rem;
@@ -596,8 +602,8 @@ form fieldset label span{
     header ul li a{
         font-size: 2rem;
     }
-    .titulo-header{
-        width: 25%;
+    .titulo-header {
+        width: 40%;
     }
 
     /* INDEX HTML SECTION DESCRIPCION */
@@ -646,11 +652,78 @@ form fieldset label span{
         padding: 0rem;
     }
     form{
-        grid-template-columns: 1fr;
+        grid-template-columns: 5% 1fr;
     }
 }
 
-@media (max-width:768px) and (max-width:1023px){
+@media(max-width: 1000px){
+    header{
+        z-index: 1;
+    }
+    header ul{
+        padding-right: 0rem;
+        gap: 2rem;
+    }
+    .nav-items{
+        background-color: #C8B6FF;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 35%;
+        height: 100vh;
+        transform: translateX(-100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 90%;
+        z-index: 1000;
+    }
+    .nav-items li a{
+        position: relative;
+        top: 10vh;
+        font-size: 2rem;
+        color: black;
+        text-decoration: underline;
+    }
+    .nav-toggle{
+        display: flex !important;
+        flex-direction: column;
+        width: 10%;
+    }
+    .nav-toggle .toggle-bar {
+        width: 1.875rem;
+        height: .25rem;
+        background-color: rgb(0, 0, 0);
+        margin-bottom: .3125rem;
+        border-radius: .125rem;
+        transition: transform 0.6s ease-in-out;
+        transform-origin: 0px 0px;
+    }
+    .nav-toggle.open .toggle-bar:nth-child(1) {
+        transform: rotate(45deg) translate(0px, 0px);
+    }
+    
+    .nav-toggle.open .toggle-bar:nth-child(2) {
+        transform: scale(0);
+    }
+    
+    .nav-toggle.open .toggle-bar:nth-child(3) {
+        transform: rotate(-45deg) translate(-5px, 1px);
+    }
+    .open{
+        transform: translate(0) !important
+    }
+    .redes-header{
+        display: flex;
+        flex-direction: column;
+        gap: 1.75rem;
+    }
+    .redes-header img{
+        width: 3.35rem;
+    }
+}
+
+@media (max-width:850px){
     :is(h2) {
         font-size: 2.25rem;
     }
@@ -733,3 +806,64 @@ form fieldset label span{
         padding-bottom: 10px;
     }
 }
+
+
+
+
+@media (max-width:600px){
+    :is(h2) {
+        font-size: 2rem;
+    }
+    :is(h3){
+        font-size: 1.3rem;
+    }
+
+    /* INDEX HTML */
+    .titulo-descripcion{
+        gap: 1.5rem;
+        margin-left: 0.6rem;
+        margin-right: 0.6rem;
+    }
+    .text-descripcion img{
+        width: 5rem;
+        height: 5rem;
+    }
+    :is(p, .footer-entregas,) {
+        font-size: 1.35rem;
+    }
+    .img-descripcion img{
+        width: 30rem;
+        height: 30rem;
+    }
+    .t-prod-titulo-imagen img{
+        width: 20rem;
+        height: 20rem;
+    }
+    .iconos-d-pedidos img{
+        width: 4.5rem;
+    }
+    footer{
+        height: 31rem;
+    }
+    .footer-copy{
+        text-align: center;
+    }
+    .footer-copy p{
+        font-size: 1.3rem;
+    }
+    /* PRODUCTOS HTML */
+    .descripcion-productos-1 h3{
+        align-self: center;
+    }
+    .descripcion-productos-1{
+        height: 40rem;
+    }
+    /* FORMULARIOS HTML */
+    :is(.formulario-consultas, .formulario-pedidos, .formulario-productos, .formulario-otros) {
+    width: 65%;
+    }
+    :is(.formulario-nombre, .formulario-email, .formulario-mensaje label textarea) label input{
+        font-size: 1.25rem;
+    }
+}
+

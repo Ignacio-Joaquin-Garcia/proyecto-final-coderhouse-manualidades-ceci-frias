@@ -14,15 +14,37 @@
         <div class="titulo-header">
             <h1>Manualidades<br>- Ceci.Frias -</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="taller.html">Taller</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+
+        <nav class="navbar">
+            <div>
+                <ul class="nav-items" id="_items">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="taller.html">Taller</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <div class="redes-header">
+                        <li><a href="https://www.instagram.com/manualidades_ceci_frias/" target="_blank"><img src="../assets/img/instagram.svg" alt="Instagram"></a></li>
+                        <li><a href="https://www.linkedin.com/in/ignaciogarciajoaquin/" target="_blank"><img src="../assets/img/linkedin.svg" alt="Linkedin"></a></li>
+                        <li><a href="https://www.facebook.com/ceilia.frias.7" target="_blank"><img src="../assets/img/facebook.svg" alt="Facebook"></a></li>
+                    </div>
+                </ul>
+            </div>
         </nav>
+        <div class="nav-toggle" id="_toggle">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+        </div>
+        <script>
+            const _toggle = document.getElementById("_toggle");
+            const _items = document.getElementById("_items");
+        
+            _toggle.onclick = () => {
+                _items.classList.toggle("open");
+                _toggle.classList.toggle("open");
+            };
+        </script>
     </header>
     <main>
         <div class="contacto-grids">
