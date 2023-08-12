@@ -26,6 +26,7 @@ font-family: 'Indie Flower', cursive */
 :is(h2) {
     font-size: 2.5rem;
     font-family: 'Indie Flower', cursive;
+    font-weight: bold;
 }
 :is(h3) {
     font-family: 'Indie Flower', cursive;
@@ -36,27 +37,21 @@ font-family: 'Indie Flower', cursive */
     font-family: 'Hubballi', cursive;
     font-size: 1.5rem;
 }
+p{
+    margin: 0rem;
+}
 
 /* HEADER */
-.redes-header{
-    display: none;
-}
-header{
-    background-color: #f9e1f9 ;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    /* Header que te siga cuando scroleas */
+header{   /*que te siga cuando scroleas */
     position: sticky;
     top: 0rem;
     width: 100%;
     height: 7rem;
     opacity: 88%;
     z-index: 1000;
-}
+    background-color: #f9e1f9;
+} 
 header ul{
-    display: flex;
     list-style: none;
     gap: 4.375rem;
     padding-right: 4.375rem;
@@ -68,7 +63,7 @@ header ul li a{
     font-weight: bold;
     color: #c54de3;
 }
-header h1{
+:is(header h1, .offcanvas-header h5){
     font-size: 2.8125rem;
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
@@ -77,16 +72,25 @@ header h1{
     color: #ba18c0;
 }
 .titulo-header{
-    display: flex;
-    justify-content: center;
     width: 20%;
-}
-.nav-toggle{
-    display: none;
 }
 header ul li a:hover{
     color: rgb(196, 0, 157);
 }
+.offcanvas-header{
+    background-color: #f9e1f9;
+}
+.offcanvas-header h5{
+    font-size: 2rem;
+}
+header button{
+    border: none;
+}
+.menu img{
+    width: 3rem;
+    height: 3rem;
+}
+
 /* FOOTER */
 footer{
     background-color: #FFD6FF;
@@ -123,6 +127,9 @@ footer{
     grid-area: copy;
     justify-self: center;
     align-self: end;
+}
+.footer-copy p{
+    margin: 0rem;
 }
 .footer-contactenos a{
     color: rgb(0, 0, 0);
@@ -200,6 +207,7 @@ footer a img{
 }
 .descripcion button a{
     text-decoration: none;
+    color: black;
 }
 .descripcion button:hover{
     background-color: #D5CFFF;
@@ -472,11 +480,20 @@ fieldset{
     border: none;
 }
 :is(.formulario-nombre, .formulario-email, .formulario-mensaje label textarea) label input{
-    width: 85%;
-    height: 25%;
-    font-size: 1.625rem;
+    width: 92%;
+    height: 2rem;
+    font-size: 1.425rem;
     font-family: 'Hubballi', cursive;
     text-align: center;
+}
+fieldset label{
+    width: 100%;
+}
+.formulario-tipo-mensaje-label label input{
+width: 1.5rem;
+height: 1.5rem;
+align-self: center;
+justify-self: center;
 }
 .formulario-mensaje label textarea{
     width: 100%;
@@ -544,7 +561,7 @@ form fieldset legend{
     background-color: #C8B6FF;
     font-size: 1.375rem;
     width: 6.5rem;
-    height: 2.1875rem;
+    height: 2.65rem;
     font-weight: bold;
     font-family: 'Hubballi', cursive;
     text-transform: capitalize;
@@ -619,7 +636,7 @@ form fieldset label span{
 
 @media (max-width: 1240px){
     /* HEADER */
-    header h1{
+    header .titulo-header h1{
         font-size: 2.4rem;
     }
     header ul{
@@ -690,64 +707,6 @@ form fieldset label span{
         padding-right: 0rem;
         gap: 2rem;
     }
-    .nav-items{
-        background-color: #C8B6FF;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 40%;
-        height: 100vh;
-        transform: translateX(-100%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        opacity: 90%;
-        z-index: 1000;
-
-    }
-    .nav-items li a{
-        position: relative;
-        top: 10vh;
-        font-size: 2rem;
-        color: black;
-        text-decoration: underline;
-    }
-    .nav-toggle{
-        display: flex !important;
-        flex-direction: column;
-        width: 10%;
-    }
-    .nav-toggle .toggle-bar {
-        width: 1.875rem;
-        height: .25rem;
-        background-color: rgb(0, 0, 0);
-        margin-bottom: .3125rem;
-        border-radius: .125rem;
-        transition: transform 0.6s ease-in-out;
-        transform-origin: 0px 0px;
-    }
-    .nav-toggle.open .toggle-bar:nth-child(1) {
-        transform: rotate(45deg) translate(0px, 0px);
-    }
-    .nav-toggle.open .toggle-bar:nth-child(2) {
-        transform: scale(0);
-    }
-    .nav-toggle.open .toggle-bar:nth-child(3) {
-        transform: rotate(-45deg) translate(-5px, 1px);
-    }
-    .open{
-        transform: translate(0) !important;
-    }
-
-    .redes-header{
-        display: flex;
-        flex-direction: column;
-        gap: 1.75rem;
-    }
-    .redes-header img{
-        width: 3.35rem;
-    }
-    
 }
 
 @media (max-width:850px){
@@ -760,14 +719,14 @@ form fieldset label span{
     /* FOOTER */
     footer{
         grid-template-columns: 1fr;
-        grid-template-rows: 20% 40% 30% 1fr;
+        grid-template-rows: 20% 30% 25% 1fr;
         grid-template-areas: 
         "contactenos"
         "iconos"
         "parrafo"
         "copy"
         ;
-        height: 28.75rem;
+        height: 32.75rem;
     }
     .footer-copy p{
         font-size: 1.5rem;
@@ -897,6 +856,14 @@ form fieldset label span{
     }
 }
 @media(max-width:480px){
+    /* Header */
+    .titulo-header h1{
+        font-size: 1.65rem;
+    }
+    .menu img{
+        width: 2rem;
+        height: 2rem;
+    }
     /* Footer */
     .footer-iconos{
         gap: 2rem;
@@ -1012,8 +979,12 @@ form fieldset label span{
     .titulo-header {
         width: 70%;
     }
-    .titulo-header h1{
-        font-size: 2rem;
+    header .titulo-header h1{
+        font-size: 1.75rem;
+    }
+    .menu img{
+        width: 1.25rem;
+        height: 1.25rem;
     }
     /* Footer */
     footer {
@@ -1085,3 +1056,4 @@ form fieldset label span{
         height: 74rem;
     }
 }
+
