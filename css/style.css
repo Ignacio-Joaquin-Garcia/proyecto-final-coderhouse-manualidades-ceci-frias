@@ -84,7 +84,9 @@ header h1{
 .nav-toggle{
     display: none;
 }
-
+header ul li a:hover{
+    color: rgb(196, 0, 157);
+}
 /* FOOTER */
 footer{
     background-color: #FFD6FF;
@@ -123,7 +125,7 @@ footer{
     align-self: end;
 }
 .footer-contactenos a{
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: underline #816FB3;
 }
 footer a img{
@@ -131,6 +133,15 @@ footer a img{
 }
 .footer-entregas p{
     font-size: 2.25rem;
+}
+.footer-contactenos a:hover{   
+    font-weight: 600;
+}
+.footer-contactenos a:active{
+    color: #FFF392;
+}
+.footer-iconos img:hover{
+    scale: 1.2;
 }
 /* INDEX HTML */
 /* MAIN */
@@ -189,6 +200,12 @@ footer a img{
 }
 .descripcion button a{
     text-decoration: none;
+}
+.descripcion button:hover{
+    background-color: #D5CFFF;
+}
+.descripcion button:active{
+    background-color: #BFB5FF;
 }
 .img-descripcion{
     display: flex;
@@ -296,7 +313,6 @@ footer a img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 /* NOSOTROS LUGAR */
@@ -568,8 +584,16 @@ form fieldset label span{
     height: 50rem;
     object-fit: cover;
 }
-
-
+.formulario-grids input:focus{
+    background-color: #ff02ff1b;
+}
+.formulario-grids textarea:focus{
+    background-color: #ff02ff1b;
+}
+.boton-enviar:hover{
+    background-color: #aa56f3;
+    border: .35rem double #FFF392;
+}
 
 @media (max-width: 1440px){
     /* NOSOTROS */
