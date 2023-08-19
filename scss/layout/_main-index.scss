@@ -1,0 +1,31 @@
+.background{
+    img{
+        width: 100%;
+        height: 37.5rem;
+        object-fit: cover;
+    }
+}
+
+.descripcion{
+    @include flex(row, none, center, 0);
+    margin: 3.75rem 0;
+    .text-descripcion{
+        width: 60%;
+        @include flex(column, none, center, 2rem);
+        .titulo-descripcion{
+            width: 100%;
+            padding-right: 5.3125rem;
+            @include flex(row, center, center, 3.125rem);
+            h1{
+                width: 35.0625rem;
+                text-decoration: underline;
+                text-decoration-color: map-get($colores, color4); 
+                order: 2;
+                text-align: center;
+            }
+        }
+    }
+    .img-descripcion{
+        @include flex(none, none, center, 0);
+    }
+}

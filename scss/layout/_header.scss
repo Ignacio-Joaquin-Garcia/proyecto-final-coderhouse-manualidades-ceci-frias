@@ -1,0 +1,43 @@
+header{
+    position: sticky;
+    top: 0rem;
+    opacity: 88%;
+    height: 7rem;
+    background-color: map-get($colores, color7);
+    z-index: 1000;
+    .navbar{
+        .titulo-header{
+            width: 20%;
+            p{
+                @include font(none, ('Dancing Script', cursive), 2.8125rem, bold, 2.5rem, center, map-get($colores, color10));
+            }
+        }
+        .menu{
+            border: none;
+            img{
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+        .offcanvas-header{
+            background-color: map-get($colores, color7);
+            h5{
+                @include font(none, ('Dancing Script', cursive), 2rem, bold, 2.5rem, center, map-get($colores, color10));
+                
+            }
+        }
+        ul{
+            list-style: none;
+            gap: 4.4rem;
+            padding-right: 4.3rem;
+            li{
+                a{
+                    @include font(none, ('Dancing Script', cursive), 2.25rem, bold, normal, center, map-get($colores, color9));
+                    &:hover{
+                        color: map-get($colores, color10);
+                    }
+                }
+            }
+        }
+    }
+}

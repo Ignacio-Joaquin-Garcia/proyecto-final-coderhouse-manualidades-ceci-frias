@@ -1,1059 +1,171 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+img {
+  width: 400px; }
+
+/*  Variables, Mixins y Funciones   */
+/*  Correspondiente al codigo general   */
 /* HUBBALLI Letra SIN SERIFA, se usa con: 
 font-family: 'Hubballi', cursive;*/
-@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
-
 /* ------------------------------------- */
-
 /* DANCING SCRIPT letra DISPLAY, ILUSTRATIVA
 font-family: 'Dancing Script', cursive; */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 /* 
 font-family: 'Indie Flower', cursive */
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-
-
-/* RESET */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 /* CONFIGURACION GENERAL DE FUENTES Y TAMAÑOS */
-::selection{
-    background-color: #C8B6FF;
-}
+::selection {
+  background-color: #C8B6FF; }
+
+:is(h1) {
+  font: bold 2.5rem "Indie Flower", cursive; }
+
 :is(h2) {
-    font-size: 2.5rem;
-    font-family: 'Indie Flower', cursive;
-    font-weight: bold;
-}
+  font: bold 2.15rem "Indie Flower", cursive; }
+
 :is(h3) {
-    font-family: 'Indie Flower', cursive;
-    font-size: 2rem;
-    font-weight: bold;
-}
-:is(p, .footer-entregas, .footer-contactenos) {
-    font-family: 'Hubballi', cursive;
-    font-size: 1.5rem;
-}
-p{
-    margin: 0rem;
-}
+  font-family: 'Indie Flower', cursive;
+  font-size: 2rem;
+  font-weight: bold; }
 
-/* HEADER */
-header{   /*que te siga cuando scroleas */
-    position: sticky;
-    top: 0rem;
-    width: 100%;
-    height: 7rem;
-    opacity: 88%;
-    z-index: 1000;
-    background-color: #f9e1f9;
-} 
-header ul{
+:is(p, .footer-entregas, footer .footer-contactenos, .footer-contactenos) {
+  font-family: 'Hubballi', cursive;
+  font-size: 1.5rem; }
+
+p {
+  margin: 0rem; }
+
+/*  Importamos el Layout  */
+header {
+  position: sticky;
+  top: 0rem;
+  opacity: 88%;
+  height: 7rem;
+  background-color: #f9e1f9;
+  z-index: 1000; }
+  header .navbar .titulo-header {
+    width: 20%; }
+    header .navbar .titulo-header p {
+      text-decoration: none;
+      font-family: "Dancing Script", cursive;
+      font-size: 2.8125rem;
+      font-weight: bold;
+      line-height: 2.5rem;
+      text-align: center;
+      color: #ba18c0; }
+  header .navbar .menu {
+    border: none; }
+    header .navbar .menu img {
+      width: 3rem;
+      height: 3rem; }
+  header .navbar .offcanvas-header {
+    background-color: #f9e1f9; }
+    header .navbar .offcanvas-header h5 {
+      text-decoration: none;
+      font-family: "Dancing Script", cursive;
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 2.5rem;
+      text-align: center;
+      color: #ba18c0; }
+  header .navbar ul {
     list-style: none;
-    gap: 4.375rem;
-    padding-right: 4.375rem;
-}
-header ul li a{
-    text-decoration: none;
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.25rem;
-    font-weight: bold;
-    color: #c54de3;
-}
-:is(header h1, .offcanvas-header h5){
-    font-size: 2.8125rem;
-    font-family: 'Dancing Script', cursive;
-    font-weight: bold;
-    line-height: 2.5rem;
-    text-align: center;
-    color: #ba18c0;
-}
-.titulo-header{
-    width: 20%;
-}
-header ul li a:hover{
-    color: rgb(196, 0, 157);
-}
-.offcanvas-header{
-    background-color: #f9e1f9;
-}
-.offcanvas-header h5{
-    font-size: 2rem;
-}
-header button{
-    border: none;
-}
-.menu img{
-    width: 3rem;
-    height: 3rem;
-}
+    gap: 4.4rem;
+    padding-right: 4.3rem; }
+    header .navbar ul li a {
+      text-decoration: none;
+      font-family: "Dancing Script", cursive;
+      font-size: 2.25rem;
+      font-weight: bold;
+      line-height: normal;
+      text-align: center;
+      color: #c54de3; }
+      header .navbar ul li a:hover {
+        color: #ba18c0; }
 
-/* FOOTER */
-footer{
-    background-color: #FFD6FF;
-    display: grid;
-    grid-template-rows: 1fr 20%;
-    grid-template-columns: 1fr 40% 1fr;
-    grid-template-areas: 
-    "parrafo iconos contactenos"
-    "copy copy copy"
-    ;
-    height: 15.625rem;
-}
-:is(.footer-entregas, .footer-contactenos){
-    align-self: center;
-    justify-self: center;
-    font-size: 2rem;
-}
-.footer-entregas{
-    grid-area: parrafo;
-    text-align: center;
-}
-.footer-iconos{
-    grid-area: iconos;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3.125rem;
-}
-.footer-contactenos{
-    grid-area: contactenos;
-}
-.footer-copy{
-    grid-area: copy;
-    justify-self: center;
-    align-self: end;
-}
-.footer-copy p{
-    margin: 0rem;
-}
-.footer-contactenos a{
-    color: rgb(0, 0, 0);
-    text-decoration: underline #816FB3;
-}
-footer a img{
-    width: 6rem;
-}
-.footer-entregas p{
-    font-size: 2.25rem;
-}
-.footer-contactenos a:hover{   
-    font-weight: 600;
-}
-.footer-contactenos a:active{
-    color: #FFF392;
-}
-.footer-iconos img:hover{
-    scale: 1.2;
-}
-/* INDEX HTML */
-/* MAIN */
-.background img{
-    width: 100%;
-    height: 37.5rem;
-    object-fit: cover;
-}
+.background img {
+  width: 100%;
+  height: 37.5rem;
+  object-fit: cover; }
 
-/* SECTION DESCRIPCION */
-.descripcion{
-    display: flex;
-    align-items: center;
-    margin: 3.75rem 0;
-}
-.text-descripcion{
+.descripcion {
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: center;
+  gap: 0;
+  margin: 3.75rem 0; }
+  .descripcion .text-descripcion {
     width: 60%;
     display: flex;
     flex-direction: column;
+    justify-content: none;
     align-items: center;
-}
-.titulo-descripcion{
-    width: 100%;
+    gap: 2rem; }
+    .descripcion .text-descripcion .titulo-descripcion {
+      width: 100%;
+      padding-right: 5.3125rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 3.125rem; }
+      .descripcion .text-descripcion .titulo-descripcion h1 {
+        width: 35.0625rem;
+        text-decoration: underline;
+        text-decoration-color: #B8C0FF;
+        order: 2;
+        text-align: center; }
+  .descripcion .img-descripcion {
     display: flex;
-    justify-content: center;
+    flex-direction: none;
+    justify-content: none;
     align-items: center;
+    gap: 0; }
+
+footer {
+  background-color: #FFD6FF;
+  display: grid;
+  grid-template-columns: 1fr 40% 1fr;
+  grid-template-rows: 1fr 20%;
+  grid-template-areas: "parrafo iconos contactenos" "copy copy copy";
+  height: 15.625rem; }
+  footer .footer-entregas, footer .footer-contactenos {
+    align-self: center;
+    justify-self: center;
     text-align: center;
-    padding-right: 5.3125rem;
-    gap: 3.125rem;
-}
-.titulo-descripcion h2{
-    width: 35.0625rem;
-    text-decoration: underline;
-    text-decoration-color: #B8C0FF;
-    order: 2;
-    text-align: center;
-}
-.text-descripcion img{
-    width: 7rem;
-    height: 7rem;
-    order: 1;
-}
-.parrafo-descripcion{
-    text-align: center;
-    padding: 3.125rem 6.25rem;
-}
-.descripcion button{
-    background-color: #FFF392;
-    font-size: 1.375rem;
-    width: 16.25rem;
-    height: 2.8125rem;
-    font-weight: bold;
-    font-family: 'Hubballi', cursive;
-    border: .125rem solid #DDD1FF;
-    border-radius: .3125rem;
-}
-.descripcion button a{
-    text-decoration: none;
+    font-size: 2.25rem; }
+    footer .footer-entregas p, footer .footer-contactenos p {
+      font-size: 2.25rem; }
+  footer .footer-contactenos a {
     color: black;
-}
-.descripcion button:hover{
-    background-color: #D5CFFF;
-}
-.descripcion button:active{
-    background-color: #BFB5FF;
-}
-.img-descripcion{
-    display: flex;
-    width: 40%;
-    justify-content: center;
-}
-.img-descripcion img{
-    border-radius: 50%;
-    width: 37.5rem;
-    height: 37.5rem;
-    object-fit: cover;
-}
-
-/* SECTION TIPOS PRODUCTO */
-.tipos-de-productos{
-    background-color: #B8C0FF;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin-bottom: 3.75rem;
-    padding: 1.875rem 0rem;
-}
-.t-prod-titulo-imagen{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.t-prod-titulo-imagen h3{
-    font-size: 2.25rem;
-    padding-bottom: .625rem;
-    text-decoration: underline;
-}
-.tipos-de-productos img{
-    border-radius: 50%;
-    width: 28.125rem;
-    height: 28.125rem;
-    object-fit: cover;
-}
-
-/* SECTION DIAS PEDIDOS */
-.dias-pedidos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 3.75rem;
-}
-.titulo-d-pedidos{
-    padding-bottom: 3.75rem;
-}
-.titulo-d-pedidos h2{
-    text-align: center;
-}
-.iconos-d-pedidos{
-    width: 60%;
-    display: flex;
-    justify-content: space-around;
-}
-.dias-pedidos img{
-    width: 6rem;
-}
-
-/* HTML NOSOTROS */
-.nosotros{
-    margin: 10rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-.t-nosotros{
-    display: flex;
-    justify-content: center;
-}
-.vid-des-nosotros{
-    display: flex;
-    justify-content: center;
-}
-.nosotros h2{
-    text-decoration: underline;
-    padding-bottom: 1.25rem;
-    text-align: center;
-}
-.video-nosotros video{
-    width: 37.5rem;
-    height: 37.5rem;
-    display: flex;
-    margin-right: 7.5rem;
-    border-radius: 1.75rem;
-    object-fit: contain;
-}
-.descripcion-nosotros img{
-    width: 4.0625rem;
-}
-.descripcion-nosotros{
-    padding: .9375rem;
-    width: 40%;
-    border: .625rem #BBD0FF;
-    border-radius: 1.75rem;
-    box-shadow: .9375rem .9375rem .625rem #FFD6FF;
-    border-style:dotted;
-    text-align: center;
-    line-height: 1.875rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* NOSOTROS LUGAR */
-.lugar{
-    background-color: #B8C0FF;
-    margin: 2.25rem 0rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2.5rem 0;
-}
-.lugar h2{
-    text-decoration: underline;
-    padding-bottom: .5rem;
-}
-.lugar p{
-    font-weight: bold;
-    font-size: 1.75rem;
-    padding-top: .5rem;
-}
-.lugar iframe{
-    width: 60rem;
-    height: 40rem;
-    border-radius: 3.75rem 3.75rem;
-}
-
-/* HTML TALLER */
-.taller{
-    margin: 3.125rem 0rem;
-}
-.taller h2{
-    text-decoration: underline;
-    padding-bottom: 2.8125rem;
-}
-.carrusel{
-    margin-bottom: 1.5625rem;
-}
-.carousel-item img{
-    width: 800px;
-    height: 80vh;
-    object-fit: cover;
-}
-.taller p{
-    font-style: italic;
-}
-
-/* HTML PRODUCTOS */
-
-.titulo-productos{
-    display: flex;
-    justify-content: center;
-}
-.titulo-productos h2{
-    text-decoration: underline;
-    font-size: 2.625rem;
-    margin: 3.75rem 0rem;
-    font-style: italic;
-}
-.descripcion-productos{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    width: 100%;
-    justify-items: center;
-}
-.descripcion-productos-1{
-    display: grid;
-    grid-template-rows: 12% 10% 1fr;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    height: 50rem;
-    width: 100%;
-}
-.descripcion-productos-1 p{
-    align-self: baseline;
-}
-.descripcion-productos img{
-    width: 32.375rem;
-    height: 32.375rem;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.descripcion-productos h3{
-    color: #744ee6;
-    font-size: 2.25rem;
-}
-
-/* HTML CONTACTO */
-
-/* Declaramos la Grilla Principal */
-.contacto-grids{
-    display: grid;
-    grid-template-rows: 10% 1fr;
-    grid-template-columns: 40% 60%;
-    height: 50rem;
-}
-.titulo-contacto{
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    justify-self: center;
-    align-self: center;
-}
-
-/* Se declara la Grila Secundaria */
-.info-personal{
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 70% 1fr;
-    grid-template-rows: 10% repeat(2, 1fr) 40%;
-    height: 100%;
-}
-.info-personal-fila{
+    text-decoration: underline #816FB3; }
+    footer .footer-contactenos a:hover {
+      font-weight: 600; }
+    footer .footer-contactenos a:active {
+      color: #FFF392; }
+  footer .footer-iconos {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-items: start;
-    gap: 1.5625rem;
-}
-.telefono{
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-}
-.email{
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
-}
-
-/* Se declara la Grila Secundaria */
-.formulario{
-    display: grid;
-    padding: .9375rem;
-}
-form{
-    display: grid;
-    grid-template-columns: 5% 1fr 5%;
-    grid-template-rows: 5% 80% 5%;
-    border: .3125rem dashed #BBD0FF;
-
-}
-.formulario form fieldset{
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-}
-.formulario-grids{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10% 30% 60%;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-items: center;
-}
-fieldset{
-    height: 100%;
-    width: 100%;
-    border: none;
-}
-:is(.formulario-nombre, .formulario-email, .formulario-mensaje label textarea) label input{
-    width: 92%;
-    height: 2rem;
-    font-size: 1.425rem;
-    font-family: 'Hubballi', cursive;
-    text-align: center;
-}
-fieldset label{
-    width: 100%;
-}
-.formulario-tipo-mensaje-label label input{
-width: 1.5rem;
-height: 1.5rem;
-align-self: center;
-justify-self: center;
-}
-.formulario-mensaje label textarea{
-    width: 100%;
-}
-form fieldset legend{
-    grid-row: 1 / 2;
-    grid-column: 1 / 3;
-    justify-self: left;
-}
-.formulario-nombre{
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    width: 100%;
-    height: 100%;
-}
-.formulario-email{
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-    width: 100%;
-    height: 100%;
-}
-.formulario-tipo-mensaje{
-    width: 100%;
-    height: 100%;
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
-}
-.formulario-tipo-mensaje-label{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 5% 1fr 5%;
-    grid-template-rows: 12% repeat(4, 1fr);
-    align-items: center;
-    justify-items: center;
-}
-:is(.formulario-consultas, .formulario-pedidos, .formulario-productos, .formulario-otros){
-    grid-column: 2 / 3;
-    display: grid;
-    grid-template-columns: 80% 20%;
-    width: 50%;
-}
-:is(.formulario-consultas, .formulario-pedidos, .formulario-productos, .formulario-otros) label{
-    grid-column: 1 / 2;
-}
-:is(.formulario-consultas, .formulario-pedidos, .formulario-productos, .formulario-otros) input{
-    grid-column: 2 / 3;
-}
-.formulario-tipo-mensaje-label span{
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    align-self: baseline;
-}
-.formulario-tipo-mensaje-label label input{
-    display: flex;
     justify-content: center;
-}
-.formulario-mensaje{
-    grid-row: 3 / 4;
-    grid-column: 1 / 2;
-    width: 100%;
-    height: 100%;
-}
-.boton-enviar{
-    background-color: #C8B6FF;
-    font-size: 1.375rem;
-    width: 6.5rem;
-    height: 2.65rem;
-    font-weight: bold;
-    font-family: 'Hubballi', cursive;
-    text-transform: capitalize;
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
+    align-items: center;
+    gap: 3.125rem;
+    width: 100%; }
+    footer .footer-iconos a img {
+      width: 6rem; }
+      footer .footer-iconos a img:hover {
+        scale: 1.2; }
+  footer .footer-copy {
+    grid-area: copy;
+    align-self: end;
     justify-self: center;
-    width: 60%;
-    border: .1875rem double #FFF392;
-}
-.titulo-contacto h2{
-    text-decoration: underline;
-    font-size: 2.5rem;
-}
-.info-personal img{
-    width: 4.125rem;
-}
-.info-personal h3{
-    font-size: 1.625rem;
-}
-.formulario legend{
-    font-size: 2.25rem;
-    font-family: 'Indie Flower', cursive;
-    font-weight: bold;
-    color: #784dc8;
-}
-.formulario span{
-    font-size: 24px;
-    font-family: 'Hubballi', cursive;
-    font-weight: bold;
-}
-form fieldset label span{
-    display: flex;
-    flex-direction: column;
-}
-.contacto-background img{
-    width: 100%;
-    height: 50rem;
-    object-fit: cover;
-}
-.formulario-grids input:focus{
-    background-color: #ff02ff1b;
-}
-.formulario-grids textarea:focus{
-    background-color: #ff02ff1b;
-}
-.boton-enviar:hover{
-    background-color: #aa56f3;
-    border: .35rem double #FFF392;
-}
+    text-align: center;
+    font-size: 1.5rem; }
 
-@media (max-width: 1440px){
-    /* NOSOTROS */
-    .vid-des-nosotros{
-        gap: 2.5rem;
-    }
-    .video-nosotros video{
-        margin: 0rem;
-    }
-    .descripcion-nosotros{
-        width: 65%;
-    }
-    /* PRODUCTOS */
-    .descripcion-productos-1{
-        align-items: normal;
-        height: 36rem;
-    }
-    .descripcion-productos img{
-        width: 25rem;
-        height: 25rem;
-    }
-}
-
-@media (max-width: 1240px){
-    /* HEADER */
-    header .titulo-header h1{
-        font-size: 2.4rem;
-    }
-    header ul{
-        gap: 3rem;
-    }
-    header ul li a{
-        font-size: 2rem;
-    }
-    .titulo-header {
-        width: 40%;
-    }
-
-    /* INDEX HTML SECTION DESCRIPCION */
-    .descripcion{
-        flex-direction: column;
-    }
-    .text-descripcion{
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 2rem;
-    }
-    .titulo-descripcion{
-        padding: 0rem;
-    }
-    .parrafo-descripcion{
-        padding: 3rem 1rem;
-    }
-    .img-descripcion{
-        width: 100%;
-    }
-    footer p{
-        font-size: 1.65rem;
-    }
-
-    /* NOSOTROS HTML */
-    .vid-des-nosotros{
-        flex-wrap: wrap;
-    }
-    .descripcion-nosotros{
-        width: 95%;
-    }
-
-    /* PRODUCTOS HTML */
-    .descripcion-productos{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* FORMULARIO HTML */
-    .info-personal{
-        grid-template-columns: 1fr;
-    }
-    :is(.telefono, .email){
-        grid-column: 1 / 2;
-    }
-    .formulario{
-        padding: 0rem;
-    }
-    form{
-        grid-template-columns: 5% 1fr;
-    }
-}
-
-@media(max-width: 1000px){
-    header{
-        z-index: 1;
-    }
-    header ul{
-        padding-right: 0rem;
-        gap: 2rem;
-    }
-}
-
-@media (max-width:850px){
-    :is(h2) {
-        font-size: 2.25rem;
-    }
-    :is(h3){
-        font-size: 1.65rem;
-    }
-    /* FOOTER */
-    footer{
-        grid-template-columns: 1fr;
-        grid-template-rows: 20% 30% 25% 1fr;
-        grid-template-areas: 
-        "contactenos"
-        "iconos"
-        "parrafo"
-        "copy"
-        ;
-        height: 32.75rem;
-    }
-    .footer-copy p{
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    /* INDEX HTML */
-    .parrafo-descripcion p{
-        line-height: 2rem;
-    }
-    .t-prod-titulo-imagen{
-        padding-bottom: 1.875rem;
-    }
-    .iconos-d-pedidos{
-        width: 100%;
-    }
-    /* NOSOTROS HTML */
-    .nosotros{
-        margin: 5rem 0rem;
-    }
-    .video-nosotros video{
-        width: 100%;
-        height: max-content;
-    }
-    .lugar iframe{
-        width: 95%;
-        height: 65vh;
-    }
-    /* PRODUCTOS HTML */
-    .descripcion-productos{
-        grid-template-columns: 1fr;
-    }
-    .descripcion-productos-1{
-        height: 45rem;
-    }
-    .descripcion-productos-1 img{
-        width: 28rem;
-        height: 28rem;
-    }
-    /* CONTACTO HTML */
-    .contacto-grids{
-        grid-template-columns: 1fr;
-        grid-template-rows: 10% 22% 1fr;
-    }
-    .info-personal{
-        grid-row: 2 / 3;
-        justify-items: center;
-    }
-    .formulario{
-        grid-row: 3 / 4;
-    }
-    :is(.titulo-contacto, .telefono, .email, .formulario){
-        grid-column: 1 / 2;
-    }
-    form{
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-    }
-    form fieldset{
-        width: 100%;
-    }
-    .telefono{
-        padding-bottom: 10px;
-    }
-}
-
-@media (max-width:600px){
-    :is(h2) {
-        font-size: 2rem;
-    }
-    :is(h3){
-        font-size: 1.3rem;
-    }
-    /* INDEX HTML */
-    .titulo-header{
-        width: 60%;
-    }
-    .titulo-descripcion{
-        gap: 1.5rem;
-        margin-left: 0.6rem;
-        margin-right: 0.6rem;
-        width: 96%;
-    }
-    .text-descripcion img{
-        width: 5rem;
-        height: 5rem;
-    }
-    :is(p, .footer-entregas,) {
-        font-size: 1.35rem;
-    }
-    .img-descripcion img{
-        width: 30rem;
-        height: 30rem;
-    }
-    .t-prod-titulo-imagen img{
-        width: 20rem;
-        height: 20rem;
-    }
-    .iconos-d-pedidos img{
-        width: 4.5rem;
-    }
-    footer{
-        height: 36rem;
-    }
-    .footer-copy{
-        text-align: center;
-    }
-    .footer-copy p{
-        font-size: 1.3rem;
-    }
-    .dias-pedidos{
-        width: 92%;
-    }
-    /* PRODUCTOS HTML */
-    .descripcion-productos-1 h3{
-        align-self: center;
-    }
-    .descripcion-productos-1{
-        height: 40rem;
-    }
-    /* FORMULARIOS HTML */
-    :is(.formulario-consultas, .formulario-pedidos, .formulario-productos, .formulario-otros) {
-    width: 65%;
-    }
-    :is(.formulario-nombre, .formulario-email, .formulario-mensaje label textarea) label input{
-        font-size: 1.25rem;
-    }
-}
-@media(max-width:480px){
-    /* Header */
-    .titulo-header h1{
-        font-size: 1.65rem;
-    }
-    .menu img{
-        width: 2rem;
-        height: 2rem;
-    }
-    /* Footer */
-    .footer-iconos{
-        gap: 2rem;
-    }
-    .footer-iconos img{
-        width: 5rem;
-    }
-    .footer-entregas p{
-        font-size: 1.8rem;
-    }
-    /* INDEX HTML */
-    :is(h2){
-        font-size: 1.8rem;
-    }
-    :is(h3){
-        font-size: 1.5rem;
-    }
-    :is(p){
-        font-size: 1.35rem;
-    }
-    .parrafo-descripcion p{
-        font-size: 1.35rem;
-    }
-    .descripcion button{
-        font-size: 1.25rem;
-        width: 16.25rem;
-        height: 2rem;
-    }
-    .text-descripcion img {
-        display: none;
-    }
-    .img-descripcion img {
-        width: 24rem;
-        height: 24rem;
-    }
-    .t-prod-titulo-imagen img {
-        width: 15rem;
-        height: 15rem;
-    }
-    .t-prod-titulo-imagen h3{
-        font-size: 1.6rem;
-    }
-    .parrafo-descripcion {
-        padding: 2rem 1rem;
-    }
-    .dias-pedidos {
-        width: 100%;
-    }
-
-    /* NOSOTROS HTML */
-    .lugar p {
-        font-size: 1.35rem;
-    }
-    /* PRODUCTOS HTML */
-    .descripcion-productos-1 img {
-        width: 18rem;
-        height: 18rem;
-    }
-    .descripcion-productos-1 {
-        height: 28rem;
-    }
-    .nav-items{
-        width: 55%;
-    }
-    .titulo-productos h2{
-        text-align: center;
-    }
-
-    /* CONTACTO HTML */
-    .info-personal {
-        grid-template-rows: 10% repeat(2, 1fr) 25%;
-    }
-    .contacto-grids{
-        height: 90rem;
-    }
-    .formulario form fieldset{
-        width: 94%;
-    }
-    .formulario-grids{
-        grid-template-columns: 1fr;
-        grid-template-rows: 6.25rem repeat(2, 7.8125rem) 12.5rem 20rem ;
-    }
-    form fieldset legend {
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
-    }
-    :is(.formulario-nombre, .formulario-email, .formulario-tipo-mensaje, .formulario-mensaje, .boton-enviar){
-        grid-column: 1 / 2;
-        align-items: center;
-    }
-    :is(.formulario-nombre, .formulario-email, .formulario-mensaje label textarea) label input{
-        width: 95%;
-    }
-    .formulario-nombre{
-        grid-row: 2 / 3;
-    }
-    .formulario-email{
-        grid-row: 3 / 4;
-    }
-    .formulario-tipo-mensaje{
-        grid-row: 4 / 5;
-    }
-    .formulario-mensaje{
-        grid-row: 5 / 6;
-    }
-    .boton-enviar{
-        grid-row: 6 / 7;
-    }
-}
-
-@media (max-width: 320px){
-    /* Header */
-    .titulo-header {
-        width: 70%;
-    }
-    header .titulo-header h1{
-        font-size: 1.75rem;
-    }
-    .menu img{
-        width: 1.25rem;
-        height: 1.25rem;
-    }
-    /* Footer */
-    footer {
-        grid-template-columns: 1fr;
-        grid-template-rows: 15% repeat(3, 1fr) 20% 5%;
-        grid-template-areas:
-            "contactenos"
-            "iconos"
-            "iconos"
-            "iconos"
-            "parrafo"
-            "copy";
-            height: 50rem;
-    }
-    .footer-iconos{
-        flex-flow: column nowrap;
-    }
-    /* Index HTML */
-    :is(h2) {
-        font-size: 1.4rem;
-    }
-    .parrafo-descripcion p {
-        font-size: 1rem;
-    }
-    .descripcion button {
-        font-size: 1rem;
-        width: 12.25rem;
-        height: 2rem;
-    }
-    .img-descripcion img {
-        width: 20rem;
-        height: 20rem;
-    }
-    /* Nosotros HTML */
-    .descripcion-nosotros p{
-        font-size: 1rem;
-    }
-    .lugar p {
-        text-align: center;
-    }
-    .lugar iframe{
-        height: 45vh;
-    }
-    /* Productos HTMl */
-    .descripcion-productos-1{
-        grid-template-rows: 25% 10% 1fr;
-    }
-    .descripcion-productos-1 img {
-        width: 14rem;
-        height: 14rem;
-        align-self: center ;
-    }   
-    /* Contactanos HTML */
-    .titulo-contacto h2 {
-    text-decoration: underline;
-    font-size: 1.8rem;
-    }
-    .info-personal h3{
-        font-size: 1.25rem;
-    }
-    .info-personal img {
-    width: 3.125rem;
-    }
-    .contacto-grids {
-        grid-template-columns: 1fr;
-        grid-template-rows: 8% 14% 1fr;
-    }
-    .contacto-grids {
-        height: 74rem;
-    }
-}
-
+/*  Correspondiente a las mediaQ  */

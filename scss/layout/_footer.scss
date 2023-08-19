@@ -1,0 +1,39 @@
+footer{
+    background-color: map-get($colores, color6);
+    @include grid-area(1fr 40% 1fr, 1fr 20%, "parrafo iconos contactenos""copy copy copy", 15.625rem);
+    .footer-entregas{
+        @include align-self(center, center, center, 2.25rem);
+        p{
+            font-size: 2.25rem;
+        }
+    }
+    .footer-contactenos{
+        @extend .footer-entregas;
+        a{
+            color: map-get($colores, color12);
+            text-decoration: underline map-get($colores, color3);
+            &:hover{
+                font-weight: 600;
+            }
+            &:active{
+                color: map-get($colores, color11);
+            }
+        }
+    }
+    .footer-iconos{
+        @include flex(row, center, center, 3.125rem);
+        width: 100%;
+        a{
+            img{
+                width: 6rem;
+                &:hover{
+                    scale: 1.2;
+                }
+            }
+        }
+    }
+    .footer-copy{
+        grid-area: copy;
+        @include align-self(end, center, center, 1.5rem);
+    }
+}

@@ -1,0 +1,22 @@
+/* CONFIGURACION GENERAL DE FUENTES Y TAMAÑOS */
+::selection{
+    background-color: #C8B6FF;
+}
+:is(h1){
+    @include 
+}
+:is(h2) {
+    font: $h2-font;
+}
+:is(h3) {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+}
+:is(p, .footer-entregas, .footer-contactenos) {
+    font-family: 'Hubballi', cursive;
+    font-size: 1.5rem;
+}
+p{
+    margin: 0rem;
+}
