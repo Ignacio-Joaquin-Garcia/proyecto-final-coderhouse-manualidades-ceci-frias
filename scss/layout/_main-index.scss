@@ -11,7 +11,7 @@
     margin: 3.75rem 0;
     .text-descripcion{
         width: 60%;
-        @include flex(column, none, center, 2rem);
+        @include flex(column, none, center, 3.125rem);
         .titulo-descripcion{
             width: 100%;
             padding-right: 5.3125rem;
@@ -23,9 +23,90 @@
                 order: 2;
                 text-align: center;
             }
+            img{
+                width: 7rem;
+                height: 7rem;
+                order: 1;
+            }
+        }
+        .parrafo-descripcion{
+            text-align: center;
+            padding: 0 6.25rem;
         }
     }
     .img-descripcion{
         @include flex(none, none, center, 0);
+        width: 40%;
+        justify-content: center;
+        img{
+            @include img-circular(37.5rem);
+        }
+    }
+}
+
+.tipos-de-productos{
+    @include flex(row, space-around, center, 0);
+    height: 650px;
+    padding: 1.875rem 0;
+    margin-bottom: 3.75rem;
+    background-color: map-get($colores, color4);
+    .t-prod-titulo-imagen{
+        @include flex(column, center, center, 0);
+        p{
+            @include font-general(('Indie Flower', cursive), 2.25rem, bold);
+            text-decoration: underline;
+            padding-bottom: 2.625rem;
+        }
+        img{
+            @include img-circular($t-prod-img);
+            &:hover{
+                // transform: scale(1.45);
+                // transition: 1s;
+                animation-name: t-img;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in-out;
+                animation-duration: 8s;
+                animation-delay: 0s;
+            }
+        }
+    }
+}
+
+.dias-pedidos{
+    @include flex(column, none, center, 0);
+    width: auto;
+    margin: 8rem 0;
+    .titulo-d-pedidos{
+        padding-bottom: 3.75rem;
+    }
+    .iconos-d-pedidos{
+        width: 60%;
+        @include flex(row, space-around, center, 0);
+        img{
+            width: 7rem;
+        }
+    }
+}
+
+@keyframes t-img{
+    0%{
+        transform: scale(1.1);
+    }
+    10%{
+        border-radius: 40%;
+    }
+    25%{
+        transform: scale(1.2);
+        border-radius: 25%;
+    }
+    50%{
+        border-radius: 15%;
+        transform: scale(1.25);
+    }
+    75%{
+        border-radius: 5%;
+    }
+    100%{
+        border-radius: 50%;
     }
 }

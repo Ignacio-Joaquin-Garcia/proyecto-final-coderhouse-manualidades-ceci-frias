@@ -1,0 +1,35 @@
+
+main{
+    .productos{
+        .titulo-productos{
+            @include flex(column, center, center, 0);
+            h2{
+                text-decoration: underline;
+                font-size: 2.625rem;
+                margin: 3.75rem 0rem;
+                font-style: italic;
+            }
+        }
+        .descripcion-productos{
+            @include grid(auto, (repeat(3,1fr)), center, center);
+            width: 100%;
+            .descripcion-productos-1{
+                @include grid(12% 10% 1fr, 1fr, center, center);
+                text-align: center;
+                height: 46rem;
+                width: 100%;    
+                h3{
+                    @include font-general(('Indie Flower', cursive), 2.25rem, bold);
+                    color: map-get($colores, color2);
+                }
+                p{
+                    align-self: baseline;
+                }
+                img{
+                    @include img-circular(32.375rem);
+                    align-self:flex-start;
+                }
+            }
+        }
+    }
+}

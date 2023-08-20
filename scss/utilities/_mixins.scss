@@ -5,13 +5,19 @@
     align-items: $align;
     gap: $gap;
 }
+@mixin grid($rows, $columns, $justify, $align){
+    display: grid;
+    grid-template: $rows / $columns;
+    justify-items: $justify;
+    align-items: $align;
+}
 @mixin grid-area($columns, $rows, $areas, $height){
     display: grid;
-    grid-template-columns: $columns;
-    grid-template-rows: $rows;
+    grid-template: $rows / $columns;
     grid-template-areas: $areas;
     height: $height;
 }
+
 @mixin align-self($align, $justify, $text, $size){
     align-self: $align;
     justify-self: $justify;
@@ -27,9 +33,24 @@
     text-align: $align;
     color: $color;
 }
-
+@mixin font-buttons($color, $size, $width, $height, $family, $weight, $border, $radius){
+    background-color: $color;
+    font-size: $size;
+    width: $width;
+    height: $height;
+    font-family: $family;
+    font-weight: $weight;
+    border: $border;
+    border-radius: $radius;
+}
 @mixin font-general($family, $size, $weight){
     font-family: $family;
     font-size: $size;
     font-weight: $weight;
+}
+@mixin img-circular($width){
+    width: $width;
+    height: $width;
+    border-radius: 50%;
+    object-fit: cover;
 }

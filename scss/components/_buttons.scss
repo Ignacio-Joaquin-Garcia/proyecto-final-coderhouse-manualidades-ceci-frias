@@ -1,0 +1,31 @@
+.descripcion{
+    .text-descripcion{
+        .boton-descripcion{
+            button{
+                @include font-buttons(map-get($colores, color11),  1.375rem, 16.25rem, 2.8125rem, ('Hubballi', cursive), bold, .125rem solid map-get($colores, color14), .3125rem);
+                a{
+                    text-decoration: none;
+                    color: map-get($colores, color12);
+                    &:hover{
+                        color: map-get($colores, color13);
+                    }
+                }
+                &:hover{
+                    background-color: map-get($colores, color5);
+                    border-color: map-get($colores, color9);
+                }
+                &:active{
+                    background-color: map-get($colores, color9);
+                }
+            }
+        }
+    }
+}
+
+.boton-enviar{
+    @include font-buttons(map-get($colores, color5), 1.375rem, 6.5rem, 2.65rem, ('Hubballi', cursive), bold, .1875rem double map-get($colores, color11), 0);
+    &:hover{
+        background-color: map-get($colores, color8);
+        border: .35rem double map-get($colores, color11);
+    }
+}

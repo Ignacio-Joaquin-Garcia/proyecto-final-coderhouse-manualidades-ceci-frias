@@ -4,12 +4,9 @@
 ## Creado por Ignacio Garcia
 En este repositorio se muestran todas las tecnologias aprendidas en el curso de Desarrollo Web de Corderhouse:
 
-
-
-![HTML:5](https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png "HTML:5")
-![CSS:3](https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png "CSS:3")
-![Bootstrap Framework de CSS](https://www.4webs.es/blog/wp-content/uploads/2017/09/nueva-beta-de-bootstrap-4.jpg "Bootstrap Framework de CSS")
-![SASS Preprocesador de CSS](https://1000marcas.net/wp-content/uploads/2021/06/Sass-Logo.png)
+|  ![HTML:5](https://i.ibb.co/TRVtTtQ/html.png "HTML:5")  | ![CSS:3](https://i.ibb.co/DpF90sV/css.png "CSS:3")  | ![Bootstrap Framework de CSS](https://i.ibb.co/4pTfNfK/bootstrap.png "Bootstrap Framework de CSS") | 
+| ------------ | ------------ | ------------ |
+| ![SASS Preprocesador de CSS](https://i.ibb.co/nwXQgV9/sass.png "SASS Preprocesador de CSS")  | ![Git](https://i.ibb.co/8jhnHtR/git.png "Git") | ![GitHub](https://i.ibb.co/WkjncVb/github.png "GitHub") |
 
 ## Contacto
 Podes contactarte conmigo a traves de:

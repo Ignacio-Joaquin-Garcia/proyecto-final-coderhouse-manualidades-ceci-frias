@@ -3,15 +3,15 @@
     background-color: #C8B6FF;
 }
 :is(h1){
-    @include 
+    font: $title-font;
+    text-align: center;
 }
 :is(h2) {
     font: $h2-font;
+    text-align: center;
 }
 :is(h3) {
-    font-family: 'Indie Flower', cursive;
-    font-size: 2rem;
-    font-weight: bold;
+    font: $h3-font;
 }
 :is(p, .footer-entregas, .footer-contactenos) {
     font-family: 'Hubballi', cursive;

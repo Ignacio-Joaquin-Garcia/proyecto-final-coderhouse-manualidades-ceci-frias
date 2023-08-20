@@ -1,19 +1,16 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Hubballi&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-img {
-  width: 400px; }
-
 /*  Variables, Mixins y Funciones   */
 /*  Correspondiente al codigo general   */
 /* HUBBALLI Letra SIN SERIFA, se usa con: 
 font-family: 'Hubballi', cursive;*/
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&display=swap");
 /* ------------------------------------- */
 /* DANCING SCRIPT letra DISPLAY, ILUSTRATIVA
 font-family: 'Dancing Script', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 /* 
 font-family: 'Indie Flower', cursive */
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -24,15 +21,15 @@ font-family: 'Indie Flower', cursive */
   background-color: #C8B6FF; }
 
 :is(h1) {
-  font: bold 2.5rem "Indie Flower", cursive; }
+  font: bold 2.5rem "Indie Flower", cursive;
+  text-align: center; }
 
 :is(h2) {
-  font: bold 2.15rem "Indie Flower", cursive; }
+  font: bold 2.15rem "Indie Flower", cursive;
+  text-align: center; }
 
 :is(h3) {
-  font-family: 'Indie Flower', cursive;
-  font-size: 2rem;
-  font-weight: bold; }
+  font: normal 1.8rem "Indie Flower", cursive; }
 
 :is(p, .footer-entregas, footer .footer-contactenos, .footer-contactenos) {
   font-family: 'Hubballi', cursive;
@@ -107,7 +104,7 @@ header {
     flex-direction: column;
     justify-content: none;
     align-items: center;
-    gap: 2rem; }
+    gap: 3.125rem; }
     .descripcion .text-descripcion .titulo-descripcion {
       width: 100%;
       padding-right: 5.3125rem;
@@ -122,18 +119,101 @@ header {
         text-decoration-color: #B8C0FF;
         order: 2;
         text-align: center; }
+      .descripcion .text-descripcion .titulo-descripcion img {
+        width: 7rem;
+        height: 7rem;
+        order: 1; }
+    .descripcion .text-descripcion .parrafo-descripcion {
+      text-align: center;
+      padding: 0 6.25rem; }
   .descripcion .img-descripcion {
     display: flex;
     flex-direction: none;
     justify-content: none;
     align-items: center;
+    gap: 0;
+    width: 40%;
+    justify-content: center; }
+    .descripcion .img-descripcion img {
+      width: 37.5rem;
+      height: 37.5rem;
+      border-radius: 50%;
+      object-fit: cover; }
+
+.tipos-de-productos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+  height: 650px;
+  padding: 1.875rem 0;
+  margin-bottom: 3.75rem;
+  background-color: #B8C0FF; }
+  .tipos-de-productos .t-prod-titulo-imagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 0; }
+    .tipos-de-productos .t-prod-titulo-imagen p {
+      font-family: "Indie Flower", cursive;
+      font-size: 2.25rem;
+      font-weight: bold;
+      text-decoration: underline;
+      padding-bottom: 2.625rem; }
+    .tipos-de-productos .t-prod-titulo-imagen img {
+      width: 28.125rem;
+      height: 28.125rem;
+      border-radius: 50%;
+      object-fit: cover; }
+      .tipos-de-productos .t-prod-titulo-imagen img:hover {
+        animation-name: t-img;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        animation-duration: 8s;
+        animation-delay: 0s; }
+
+.dias-pedidos {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: center;
+  gap: 0;
+  width: auto;
+  margin: 8rem 0; }
+  .dias-pedidos .titulo-d-pedidos {
+    padding-bottom: 3.75rem; }
+  .dias-pedidos .iconos-d-pedidos {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0; }
+    .dias-pedidos .iconos-d-pedidos img {
+      width: 7rem; }
+
+@keyframes t-img {
+  0% {
+    transform: scale(1.1); }
+  10% {
+    border-radius: 40%; }
+  25% {
+    transform: scale(1.2);
+    border-radius: 25%; }
+  50% {
+    border-radius: 15%;
+    transform: scale(1.25); }
+  75% {
+    border-radius: 5%; }
+  100% {
+    border-radius: 50%; } }
 
 footer {
   background-color: #FFD6FF;
   display: grid;
-  grid-template-columns: 1fr 40% 1fr;
-  grid-template-rows: 1fr 20%;
+  grid-template: 1fr 20%/1fr 40% 1fr;
   grid-template-areas: "parrafo iconos contactenos" "copy copy copy";
   height: 15.625rem; }
   footer .footer-entregas, footer .footer-contactenos {
@@ -167,5 +247,336 @@ footer {
     justify-self: center;
     text-align: center;
     font-size: 1.5rem; }
+
+/* Layout de Views */
+main .nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: center;
+  gap: 0;
+  margin: 10rem 0; }
+  main .nosotros .t-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0; }
+    main .nosotros .t-nosotros h1 {
+      text-decoration: underline;
+      padding-bottom: 1.25rem; }
+  main .nosotros .vid-des-nosotros {
+    display: flex;
+    justify-content: center; }
+    main .nosotros .vid-des-nosotros .video-nosotros iframe {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      width: 37.5rem;
+      height: 37.5rem;
+      margin-right: 7.5rem;
+      border-radius: 1.75rem;
+      object-fit: contain; }
+    main .nosotros .vid-des-nosotros .descripcion-nosotros {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+      padding: 1rem;
+      width: 40%;
+      border: 0.625rem #B8C0FF;
+      border-radius: 1.75rem;
+      box-shadow: 0.9375rem 0.9375rem 0.625rem #FFD6FF;
+      border-style: dotted;
+      text-align: center;
+      line-height: 1.875rem; }
+      main .nosotros .vid-des-nosotros .descripcion-nosotros img {
+        width: 4rem; }
+
+main .lugar {
+  background-color: #B8C0FF;
+  margin: 2.25rem 0;
+  padding: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: center;
+  gap: 0; }
+  main .lugar h2 {
+    text-decoration: underline;
+    padding-bottom: .5rem; }
+  main .lugar iframe {
+    width: 60rem;
+    height: 40rem;
+    border-radius: 3.75rem 3.75rem; }
+  main .lugar p {
+    font-family: "Hubballi", cursive;
+    font-size: 1.75rem;
+    font-weight: bold; }
+
+main .productos .titulo-productos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0; }
+  main .productos .titulo-productos h2 {
+    text-decoration: underline;
+    font-size: 2.625rem;
+    margin: 3.75rem 0rem;
+    font-style: italic; }
+
+main .productos .descripcion-productos {
+  display: grid;
+  grid-template: auto/repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  width: 100%; }
+  main .productos .descripcion-productos .descripcion-productos-1 {
+    display: grid;
+    grid-template: 12% 10% 1fr/1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    height: 46rem;
+    width: 100%; }
+    main .productos .descripcion-productos .descripcion-productos-1 h3 {
+      font-family: "Indie Flower", cursive;
+      font-size: 2.25rem;
+      font-weight: bold;
+      color: #784dc8; }
+    main .productos .descripcion-productos .descripcion-productos-1 p {
+      align-self: baseline; }
+    main .productos .descripcion-productos .descripcion-productos-1 img {
+      width: 32.375rem;
+      height: 32.375rem;
+      border-radius: 50%;
+      object-fit: cover;
+      align-self: flex-start; }
+
+main .taller {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem; }
+  main .taller h2 {
+    text-decoration: underline;
+    text-decoration-color: #B8C0FF; }
+  main .taller .p-v-nosotros {
+    margin: 1rem 0;
+    height: 80vh;
+    width: 60%; }
+    main .taller .p-v-nosotros iframe {
+      width: 100%;
+      height: 80%; }
+    main .taller .p-v-nosotros p {
+      margin-top: 1rem;
+      font-style: italic; }
+
+main .carousel {
+  margin-bottom: 6rem; }
+  main .carousel .carousel-item img {
+    width: 800px;
+    height: 80vh;
+    object-fit: cover; }
+
+.contacto-grids {
+  display: grid;
+  grid-template: 10% 1fr/40% 60%;
+  justify-items: center;
+  align-items: center;
+  height: 50rem; }
+  .contacto-grids .titulo-contacto {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    justify-self: center;
+    align-self: center; }
+    .contacto-grids .titulo-contacto h2 {
+      text-decoration: underline;
+      font-size: 2.5rem; }
+  .contacto-grids .info-personal {
+    display: grid;
+    grid-template: 10% repeat(2, 1fr) 40%/1fr 70% 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    width: 100%; }
+    .contacto-grids .info-personal .telefono {
+      grid-row: 2 / 3;
+      grid-column: 2 / 3; }
+      .contacto-grids .info-personal .telefono .info-personal-fila {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5625rem; }
+        .contacto-grids .info-personal .telefono .info-personal-fila img {
+          width: 4.125rem; }
+        .contacto-grids .info-personal .telefono .info-personal-fila h3 {
+          font-size: 1.625rem;
+          font-weight: bold; }
+    .contacto-grids .info-personal .email {
+      grid-row: 3 / 4;
+      grid-column: 2 / 3; }
+      .contacto-grids .info-personal .email .info-personal-fila {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5625rem; }
+        .contacto-grids .info-personal .email .info-personal-fila img {
+          width: 4.125rem; }
+        .contacto-grids .info-personal .email .info-personal-fila h3 {
+          font-size: 1.625rem;
+          font-weight: bold; }
+  .contacto-grids .formulario {
+    display: grid;
+    padding: .9375rem;
+    height: 100%;
+    width: 100%; }
+    .contacto-grids .formulario span {
+      font-family: "Hubballi", cursive;
+      font-size: 1.5rem;
+      font-weight: bold; }
+    .contacto-grids .formulario form {
+      display: grid;
+      grid-template: 5% 80% 5%/5% 1fr 5%;
+      justify-items: none;
+      align-items: none;
+      border: 0.3125rem dashed #B8C0FF; }
+      .contacto-grids .formulario form fieldset {
+        height: 100%;
+        width: 100%;
+        border: none;
+        grid-row: 2 / 3;
+        grid-column: 2 / 3; }
+        .contacto-grids .formulario form fieldset .formulario-grids {
+          display: grid;
+          grid-template: 10% 30% 60%/1fr 1fr;
+          justify-items: center;
+          align-items: center;
+          height: 100%;
+          width: 100%; }
+          .contacto-grids .formulario form fieldset .formulario-grids input:focus {
+            background-color: #ff02ff1b; }
+          .contacto-grids .formulario form fieldset .formulario-grids label {
+            width: 100%; }
+          .contacto-grids .formulario form fieldset .formulario-grids legend {
+            grid-row: 1 / 2;
+            grid-column: 1 / 3;
+            justify-self: left;
+            font-family: "Indie Flower", cursive;
+            font-size: 2.25rem;
+            font-weight: bold;
+            color: #784dc8; }
+          .contacto-grids .formulario form fieldset .formulario-grids .formulario-nombre {
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            width: 100%;
+            height: 100%; }
+          .contacto-grids .formulario form fieldset .formulario-grids .formulario-email {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+            width: 100%;
+            height: 100%; }
+          .contacto-grids .formulario form fieldset .formulario-grids .formulario-tipo-mensaje {
+            width: 100%;
+            height: 100%;
+            grid-row: 3 / 4;
+            grid-column: 2 / 3; }
+            .contacto-grids .formulario form fieldset .formulario-grids .formulario-tipo-mensaje .formulario-tipo-mensaje-label {
+              width: 100%;
+              height: 100%;
+              display: grid;
+              grid-template: 12% repeat(4, 1fr)/5% 1fr 5%;
+              justify-items: center;
+              align-items: center; }
+              .contacto-grids .formulario form fieldset .formulario-grids .formulario-tipo-mensaje .formulario-tipo-mensaje-label span {
+                grid-row: 1 / 2;
+                grid-column: 2 / 3;
+                align-self: baseline; }
+              .contacto-grids .formulario form fieldset .formulario-grids .formulario-tipo-mensaje .formulario-tipo-mensaje-label label {
+                width: 50%; }
+                .contacto-grids .formulario form fieldset .formulario-grids .formulario-tipo-mensaje .formulario-tipo-mensaje-label label input {
+                  width: 1.5rem;
+                  height: 1.5rem;
+                  align-self: center;
+                  justify-self: center;
+                  display: flex;
+                  justify-content: center; }
+          .contacto-grids .formulario form fieldset .formulario-grids .formulario-mensaje {
+            grid-row: 3 / 4;
+            grid-column: 1 / 2;
+            width: 100%;
+            height: 100%; }
+            .contacto-grids .formulario form fieldset .formulario-grids .formulario-mensaje label textarea {
+              width: 100%; }
+              .contacto-grids .formulario form fieldset .formulario-grids .formulario-mensaje label textarea:focus {
+                background-color: #ff02ff1b; }
+      .contacto-grids .formulario form .boton-enviar {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+        justify-self: center;
+        width: 60%; }
+
+.contacto-background img {
+  width: 100%;
+  height: 50rem;
+  object-fit: cover; }
+
+:is(.formulario-nombre, .formulario-email, .formulario-mensaje label textarea) label input {
+  width: 92%;
+  height: 2rem;
+  font-size: 1.425rem;
+  font-family: 'Hubballi', cursive;
+  text-align: center; }
+
+:is(.formulario-consultas, .formulario-pedidos, .formulario-productos, .formulario-otros) {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  width: 50%; }
+
+:is(.formulario-consultas, .formulario-pedidos, .formulario-productos, .formulario-otros) label {
+  grid-column: 1 / 2; }
+
+:is(.formulario-consultas, .formulario-pedidos, .formulario-productos, .formulario-otros) input {
+  grid-column: 2 / 3; }
+
+/* Importamos componentes */
+.descripcion .text-descripcion .boton-descripcion button {
+  background-color: #FFF392;
+  font-size: 1.375rem;
+  width: 16.25rem;
+  height: 2.8125rem;
+  font-family: "Hubballi", cursive;
+  font-weight: bold;
+  border: 0.125rem solid #D5CFFF;
+  border-radius: 0.3125rem; }
+  .descripcion .text-descripcion .boton-descripcion button a {
+    text-decoration: none;
+    color: black; }
+    .descripcion .text-descripcion .boton-descripcion button a:hover {
+      color: white; }
+  .descripcion .text-descripcion .boton-descripcion button:hover {
+    background-color: #C8B6FF;
+    border-color: #c54de3; }
+  .descripcion .text-descripcion .boton-descripcion button:active {
+    background-color: #c54de3; }
+
+.boton-enviar {
+  background-color: #C8B6FF;
+  font-size: 1.375rem;
+  width: 6.5rem;
+  height: 2.65rem;
+  font-family: "Hubballi", cursive;
+  font-weight: bold;
+  border: 0.1875rem double #FFF392;
+  border-radius: 0; }
+  .boton-enviar:hover {
+    background-color: #aa56f3;
+    border: 0.35rem double #FFF392; }
 
 /*  Correspondiente a las mediaQ  */
