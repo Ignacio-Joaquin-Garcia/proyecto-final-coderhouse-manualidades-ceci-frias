@@ -11,7 +11,7 @@
     justify-items: $justify;
     align-items: $align;
 }
-@mixin grid-area($columns, $rows, $areas, $height){
+@mixin grid-area($rows, $columns, $areas, $height){
     display: grid;
     grid-template: $rows / $columns;
     grid-template-areas: $areas;

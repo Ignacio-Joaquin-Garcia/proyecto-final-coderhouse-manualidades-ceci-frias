@@ -1,0 +1,148 @@
+@media(max-width:480px){
+    :is(h2){
+        font-size: 1.8rem;
+    }
+    :is(h3){
+        font-size: 1.5rem;
+    }
+    :is(p){
+        font-size: 1.35rem;
+    }
+    :is(.formulario-nombre, .formulario-email, .formulario-mensaje label textarea) label input{
+        width: 95%;
+    }
+    header{
+        .navbar{
+            .titulo-header{
+                p{
+                    font-size: 2.4rem;
+                }
+            }
+            .menu{
+                img{
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+    }
+    footer{
+        .footer-iconos{
+            gap: 2rem;
+            img{
+                width: 5rem;
+            }
+        }
+        .footer-entregas{
+            p{
+                font-size: 1.8rem;
+            }
+        }
+    }
+    main{
+        .descripcion{
+            .text-descripcion{
+                img{
+                    display: none;
+                }
+                .parrafo-descripcion{
+                    padding: 2rem 1rem;
+                    p{
+                        font-size: 1.35rem;
+                    }
+                }
+            }
+            button{
+                font-size: 1.25rem;
+                width: 16.25rem;
+                height: 2rem;
+            }
+            .img-descripcion{
+                img{
+                    width: 24rem;
+                    height: 24rem;
+                }
+            }
+        }
+
+        .tipos-de-productos{
+            .t-prod-titulo-imagen{
+                img{
+                    width: 15rem;
+                    height: 15rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        .dias-pedidos{
+            width: 100%;
+        }
+
+        .lugar{
+            p{
+                font-size: 1.35rem;
+            }
+        }
+
+        .productos{
+            .titulo-productos{
+                h2{
+                    text-align: center;
+                }
+            }
+            .descripcion-productos{
+                .descripcion-productos-1{
+                    height: 28rem;
+                    img{
+                        width: 18rem;
+                        height: 18rem;
+                    }
+                }
+            }
+        }
+        .contacto-grids{
+            height: 90rem;
+            .info-personal{
+                grid-template-rows: 10% repeat(2, 1fr) 25%;
+            }
+            .formulario{
+                form{
+                    fieldset{
+                        width: 94%;
+                        .formulario-grids{
+                            grid-template-columns: 1fr;
+                            grid-template-rows: 6.25rem repeat(2, 7.8125rem) 12.5rem 20rem;
+                            legend{
+                                grid-row: 1 / 2;
+                                grid-column: 1 / 2;
+                            }
+                            .formulario-nombre{
+                                grid-row: 2 / 3;
+                                grid-column: 1 / 3;
+                            }
+                            .formulario-email{
+                                grid-row: 3 / 4;
+                                grid-column: 1 / 3;
+                            }
+                            .formulario-tipo-mensaje{
+                                grid-row: 4 / 5;
+                                grid-column: 1 / 3;
+                            }
+                            .formulario-mensaje{
+                                grid-row: 5 / 6;
+                                grid-column: 1 / 3;
+                            }
+                            .boton-enviar{
+                                grid-row: 6 / 7;
+                                grid-column: 1 / 3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

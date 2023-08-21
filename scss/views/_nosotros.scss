@@ -1,60 +1,58 @@
-main{
-    .nosotros{
-        @include flex(column, none, center, 0);
-        margin: 10rem 0;
-        .t-nosotros{
-            @include flex(column, center, center, 0);
-            h1{
-                text-decoration: underline;
-                padding-bottom: 1.25rem;
+.nosotros{
+    @include flex(column, none, center, 0);
+    margin: 10rem 0;
+    .t-nosotros{
+        @include flex(column, center, center, 0);
+        h1{
+            text-decoration: underline;
+            padding-bottom: 1.25rem;
+        }
+    }
+    .vid-des-nosotros{
+        display: flex;
+        justify-content: center;
+        .video-nosotros{
+            iframe{
+                @include flex(column, center, center, 0);
+                width: 37.5rem;
+                height: 37.5rem;
+                margin-right: 7.5rem;
+                border-radius: 1.75rem;
+                object-fit: contain;
             }
         }
-        .vid-des-nosotros{
-            display: flex;
-            justify-content: center;
-            .video-nosotros{
-                iframe{
-                    @include flex(column, center, center, 0);
-                    width: 37.5rem;
-                    height: 37.5rem;
-                    margin-right: 7.5rem;
-                    border-radius: 1.75rem;
-                    object-fit: contain;
-                }
-            }
-            .descripcion-nosotros{
-                @include flex(column, center, center, 0);
-                flex-wrap: wrap;
-                padding: 1rem;
-                width: 40%;
-                border: .625rem map-get($colores, color4);
-                border-radius: 1.75rem;
-                box-shadow: .9375rem .9375rem .625rem map-get($colores, color6);
-                border-style: dotted;
-                text-align: center;
-                line-height: 1.875rem;
-                img{
-                    width: 4rem;
-                }
+        .descripcion-nosotros{
+            @include flex(column, center, center, 0);
+            flex-wrap: wrap;
+            padding: 1rem;
+            width: 40%;
+            border: .625rem map-get($colores, color4);
+            border-radius: 1.75rem;
+            box-shadow: .9375rem .9375rem .625rem map-get($colores, color6);
+            border-style: dotted;
+            text-align: center;
+            line-height: 1.875rem;
+            img{
+                width: 4rem;
             }
         }
     }
-    .lugar{
-        background-color: map-get($colores, color4);
-        margin: 2.25rem 0;
-        padding: 2.5rem 0;
-        @include flex(column, none, center, 0);
-        h2{
-            text-decoration: underline;
-            padding-bottom: .5rem;
-        }
-        iframe{
-            width: 60rem;
-            height: 40rem;
-            border-radius: 3.75rem 3.75rem;
-        }
-        p{
-            @include font-general(('Hubballi', cursive), 1.75rem, bold);
-        }
+}
+.lugar{
+    background-color: map-get($colores, color4);
+    margin: 2.25rem 0;
+    padding: 2.5rem 0;
+    @include flex(column, none, center, 0);
+    h2{
+        text-decoration: underline;
+        padding-bottom: .5rem;
+    }
+    iframe{
+        width: 60rem;
+        height: 40rem;
+        border-radius: 3.75rem 3.75rem;
+    }
+    p{
+        @include font-general(('Hubballi', cursive), 1.75rem, bold);
     }
 }

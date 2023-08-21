@@ -1,22 +1,13 @@
-@charset "UTF-8";
 /*  Variables, Mixins y Funciones   */
 /*  Correspondiente al codigo general   */
-/* HUBBALLI Letra SIN SERIFA, se usa con: 
-font-family: 'Hubballi', cursive;*/
 @import url("https://fonts.googleapis.com/css2?family=Hubballi&display=swap");
-/* ------------------------------------- */
-/* DANCING SCRIPT letra DISPLAY, ILUSTRATIVA
-font-family: 'Dancing Script', cursive; */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-/* 
-font-family: 'Indie Flower', cursive */
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
-/* CONFIGURACION GENERAL DE FUENTES Y TAMAÑOS */
 ::selection {
   background-color: #C8B6FF; }
 
@@ -146,7 +137,7 @@ header {
   justify-content: space-around;
   align-items: center;
   gap: 0;
-  height: 650px;
+  flex-wrap: wrap;
   padding: 1.875rem 0;
   margin-bottom: 3.75rem;
   background-color: #B8C0FF; }
@@ -177,7 +168,7 @@ header {
 .dias-pedidos {
   display: flex;
   flex-direction: column;
-  justify-content: none;
+  justify-content: center;
   align-items: center;
   gap: 0;
   width: auto;
@@ -217,26 +208,30 @@ footer {
   grid-template-areas: "parrafo iconos contactenos" "copy copy copy";
   height: 15.625rem; }
   footer .footer-entregas, footer .footer-contactenos {
+    grid-area: parrafo;
     align-self: center;
     justify-self: center;
     text-align: center;
     font-size: 2.25rem; }
     footer .footer-entregas p, footer .footer-contactenos p {
       font-size: 2.25rem; }
-  footer .footer-contactenos a {
-    color: black;
-    text-decoration: underline #816FB3; }
-    footer .footer-contactenos a:hover {
-      font-weight: 600; }
-    footer .footer-contactenos a:active {
-      color: #FFF392; }
+  footer .footer-contactenos {
+    grid-area: contactenos; }
+    footer .footer-contactenos a {
+      color: black;
+      text-decoration: underline #816FB3; }
+      footer .footer-contactenos a:hover {
+        font-weight: 600; }
+      footer .footer-contactenos a:active {
+        color: #FFF392; }
   footer .footer-iconos {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 3.125rem;
-    width: 100%; }
+    width: 100%;
+    grid-area: iconos; }
     footer .footer-iconos a img {
       width: 6rem; }
       footer .footer-iconos a img:hover {
@@ -249,26 +244,26 @@ footer {
     font-size: 1.5rem; }
 
 /* Layout de Views */
-main .nosotros {
+.nosotros {
   display: flex;
   flex-direction: column;
   justify-content: none;
   align-items: center;
   gap: 0;
   margin: 10rem 0; }
-  main .nosotros .t-nosotros {
+  .nosotros .t-nosotros {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0; }
-    main .nosotros .t-nosotros h1 {
+    .nosotros .t-nosotros h1 {
       text-decoration: underline;
       padding-bottom: 1.25rem; }
-  main .nosotros .vid-des-nosotros {
+  .nosotros .vid-des-nosotros {
     display: flex;
     justify-content: center; }
-    main .nosotros .vid-des-nosotros .video-nosotros iframe {
+    .nosotros .vid-des-nosotros .video-nosotros iframe {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -279,7 +274,7 @@ main .nosotros {
       margin-right: 7.5rem;
       border-radius: 1.75rem;
       object-fit: contain; }
-    main .nosotros .vid-des-nosotros .descripcion-nosotros {
+    .nosotros .vid-des-nosotros .descripcion-nosotros {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -294,10 +289,10 @@ main .nosotros {
       border-style: dotted;
       text-align: center;
       line-height: 1.875rem; }
-      main .nosotros .vid-des-nosotros .descripcion-nosotros img {
+      .nosotros .vid-des-nosotros .descripcion-nosotros img {
         width: 4rem; }
 
-main .lugar {
+.lugar {
   background-color: #B8C0FF;
   margin: 2.25rem 0;
   padding: 2.5rem 0;
@@ -306,37 +301,37 @@ main .lugar {
   justify-content: none;
   align-items: center;
   gap: 0; }
-  main .lugar h2 {
+  .lugar h2 {
     text-decoration: underline;
     padding-bottom: .5rem; }
-  main .lugar iframe {
+  .lugar iframe {
     width: 60rem;
     height: 40rem;
     border-radius: 3.75rem 3.75rem; }
-  main .lugar p {
+  .lugar p {
     font-family: "Hubballi", cursive;
     font-size: 1.75rem;
     font-weight: bold; }
 
-main .productos .titulo-productos {
+.productos .titulo-productos {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0; }
-  main .productos .titulo-productos h2 {
+  .productos .titulo-productos h2 {
     text-decoration: underline;
     font-size: 2.625rem;
     margin: 3.75rem 0rem;
     font-style: italic; }
 
-main .productos .descripcion-productos {
+.productos .descripcion-productos {
   display: grid;
   grid-template: auto/repeat(3, 1fr);
   justify-items: center;
   align-items: center;
   width: 100%; }
-  main .productos .descripcion-productos .descripcion-productos-1 {
+  .productos .descripcion-productos .descripcion-productos-1 {
     display: grid;
     grid-template: 12% 10% 1fr/1fr;
     justify-items: center;
@@ -344,40 +339,40 @@ main .productos .descripcion-productos {
     text-align: center;
     height: 46rem;
     width: 100%; }
-    main .productos .descripcion-productos .descripcion-productos-1 h3 {
+    .productos .descripcion-productos .descripcion-productos-1 h3 {
       font-family: "Indie Flower", cursive;
       font-size: 2.25rem;
       font-weight: bold;
       color: #784dc8; }
-    main .productos .descripcion-productos .descripcion-productos-1 p {
+    .productos .descripcion-productos .descripcion-productos-1 p {
       align-self: baseline; }
-    main .productos .descripcion-productos .descripcion-productos-1 img {
+    .productos .descripcion-productos .descripcion-productos-1 img {
       width: 32.375rem;
       height: 32.375rem;
       border-radius: 50%;
       object-fit: cover;
       align-self: flex-start; }
 
-main .taller {
+.taller {
   margin-top: 2.5rem;
   margin-bottom: 1rem; }
-  main .taller h2 {
+  .taller h2 {
     text-decoration: underline;
     text-decoration-color: #B8C0FF; }
-  main .taller .p-v-nosotros {
+  .taller .p-v-nosotros {
     margin: 1rem 0;
     height: 80vh;
     width: 60%; }
-    main .taller .p-v-nosotros iframe {
+    .taller .p-v-nosotros iframe {
       width: 100%;
       height: 80%; }
-    main .taller .p-v-nosotros p {
+    .taller .p-v-nosotros p {
       margin-top: 1rem;
       font-style: italic; }
 
-main .carousel {
+.carousel {
   margin-bottom: 6rem; }
-  main .carousel .carousel-item img {
+  .carousel .carousel-item img {
     width: 800px;
     height: 80vh;
     object-fit: cover; }
@@ -512,7 +507,8 @@ main .carousel {
             width: 100%;
             height: 100%; }
             .contacto-grids .formulario form fieldset .formulario-grids .formulario-mensaje label textarea {
-              width: 100%; }
+              width: 100%;
+              height: 17rem; }
               .contacto-grids .formulario form fieldset .formulario-grids .formulario-mensaje label textarea:focus {
                 background-color: #ff02ff1b; }
       .contacto-grids .formulario form .boton-enviar {
@@ -580,3 +576,275 @@ main .carousel {
     border: 0.35rem double #FFF392; }
 
 /*  Correspondiente a las mediaQ  */
+@media (max-width: 1440px) {
+  main .nosotros .vid-des-nosotros .descripcion-nosotros {
+    width: 60%; }
+  main .productos .descripcion-productos .descripcion-productos-1 {
+    align-items: normal;
+    height: 36rem; }
+    main .productos .descripcion-productos .descripcion-productos-1 img {
+      width: 25rem;
+      height: 25rem;
+      align-self: center; } }
+
+@media (max-width: 1240px) {
+  header .navbar .titulo-header h1 {
+    font-size: 2.4rem; }
+  header .navbar ul {
+    gap: 3rem; }
+    header .navbar ul li a {
+      font-size: 2rem; }
+  main .descripcion {
+    flex-direction: column; }
+    main .descripcion .text-descripcion {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 2rem;
+      gap: 0rem; }
+      main .descripcion .text-descripcion .titulo-descripcion {
+        padding: 0rem; }
+      main .descripcion .text-descripcion .parrafo-descripcion {
+        padding: 3rem 1rem; }
+    main .descripcion .img-descripcion {
+      width: 100%; }
+  main .nosotros .vid-des-nosotros {
+    flex-wrap: wrap; }
+    main .nosotros .vid-des-nosotros .video-nosotros iframe {
+      margin: 0;
+      margin-bottom: 2rem; }
+    main .nosotros .vid-des-nosotros .descripcion-nosotros {
+      width: 95%; }
+  main .productos .descripcion-productos {
+    grid-template-columns: repeat(2, 1fr); }
+    main .productos .descripcion-productos .descripcion-productos-1 {
+      margin: 1rem 0; }
+  footer p {
+    font-size: 1.65rem; } }
+
+@media (max-width: 850px) {
+  :is(h2) {
+    font-size: 2.25rem; }
+  :is(h3) {
+    font-size: 1.65rem; }
+  footer {
+    display: grid;
+    grid-template: 20% 30% 25% 1fr/1fr;
+    grid-template-areas: "contactenos" "iconos" "parrafo" "copy";
+    height: 32.75rem; }
+    footer .footer-copy p {
+      font-size: 1.5rem;
+      text-align: center; }
+  main .descripcion .text-descripcion .titulo-descripcion h1 {
+    font-size: 2rem; }
+  main .descripcion .text-descripcion .parrafo-descripcion p {
+    line-height: 2rem; }
+  main .tipos-de-productos .t-prod-titulo-imagen {
+    padding-bottom: 1.875rem; }
+  main .dias-pedidos .iconos-d-pedidos {
+    width: 100%; }
+  main .nosotros {
+    margin: 5rem 0rem; }
+    main .nosotros .vid-des-nosotros .video-nosotros {
+      width: 100%; }
+      main .nosotros .vid-des-nosotros .video-nosotros iframe {
+        width: 100%;
+        height: 50vh; }
+  main .lugar iframe {
+    width: 95%;
+    height: 65vh; }
+  main .productos .descripcion-productos {
+    grid-template-columns: 1fr; }
+    main .productos .descripcion-productos .descripcion-productos-1 {
+      height: 45rem; }
+      main .productos .descripcion-productos .descripcion-productos-1 img {
+        width: 28rem;
+        height: 28rem; }
+  main .contacto-grids {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 22% 1fr; }
+    main .contacto-grids .info-personal {
+      grid-row: 2 / 3;
+      justify-items: center; }
+      main .contacto-grids .info-personal .telefono {
+        padding-bottom: 10px; }
+    main .contacto-grids .formulario {
+      grid-row: 3 / 4; }
+      main .contacto-grids .formulario form {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center; }
+        main .contacto-grids .formulario form fieldset {
+          width: 100%; }
+          main .contacto-grids .formulario form fieldset .formulario-grids .formulario-mensaje label textarea {
+            height: 15rem; }
+  main :is(.titulo-contacto, .telefono, .email, .formulario) {
+    grid-column: 1 / 2; } }
+
+@media (max-width: 600px) {
+  :is(h2) {
+    font-size: 2rem; }
+  :is(h3) {
+    font-size: 1.3rem; }
+  :is(p, .footer-entregas, footer .footer-contactenos) {
+    font-size: 1.35rem; }
+  :is(.formulario-consultas, .formulario-pedidos, .formulario-productos, .formulario-otros) {
+    width: 65%; }
+  :is(.formulario-nombre, .formulario-email, .formulario-mensaje label textarea) label input {
+    font-size: 1.25rem; }
+  header .navbar .titulo-header {
+    width: 60%; }
+  footer {
+    height: 36rem; }
+    footer .footer-copy {
+      text-align: center; }
+      footer .footer-copy p {
+        font-size: 1.3rem; }
+    footer .footer-contactenos {
+      font-size: 2.25rem; }
+  main .descripcion .text-descripcion .titulo-descripcion {
+    gap: 1.5rem;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    width: 96%; }
+    main .descripcion .text-descripcion .titulo-descripcion h1 {
+      font-size: 1.6rem; }
+    main .descripcion .text-descripcion .titulo-descripcion img {
+      width: 5rem;
+      height: 5rem; }
+  main .descripcion .img-descripcion img {
+    width: 30rem;
+    height: 30rem; }
+  main .tipos-de-productos .t-prod-titulo-imagen img {
+    width: 20rem;
+    height: 20rem; }
+  main .dias-pedidos .iconos-d-pedidos img {
+    width: 4.5rem; }
+  main .productos .descripcion-productos .descripcion-productos-1 {
+    height: 40rem; }
+    main .productos .descripcion-productos .descripcion-productos-1 h3 {
+      align-self: center; } }
+
+@media (max-width: 480px) {
+  :is(h2) {
+    font-size: 1.8rem; }
+  :is(h3) {
+    font-size: 1.5rem; }
+  :is(p) {
+    font-size: 1.35rem; }
+  :is(.formulario-nombre, .formulario-email, .formulario-mensaje label textarea) label input {
+    width: 95%; }
+  header .navbar .titulo-header p {
+    font-size: 2.4rem; }
+  header .navbar .menu img {
+    width: 2rem;
+    height: 2rem; }
+  footer .footer-iconos {
+    gap: 2rem; }
+    footer .footer-iconos img {
+      width: 5rem; }
+  footer .footer-entregas p, footer .footer-contactenos p {
+    font-size: 1.8rem; }
+  main .descripcion .text-descripcion img {
+    display: none; }
+  main .descripcion .text-descripcion .parrafo-descripcion {
+    padding: 2rem 1rem; }
+    main .descripcion .text-descripcion .parrafo-descripcion p {
+      font-size: 1.35rem; }
+  main .descripcion button {
+    font-size: 1.25rem;
+    width: 16.25rem;
+    height: 2rem; }
+  main .descripcion .img-descripcion img {
+    width: 24rem;
+    height: 24rem; }
+  main .tipos-de-productos .t-prod-titulo-imagen img {
+    width: 15rem;
+    height: 15rem; }
+  main .tipos-de-productos .t-prod-titulo-imagen p {
+    font-size: 1.6rem; }
+  main .dias-pedidos {
+    width: 100%; }
+  main .lugar p {
+    font-size: 1.35rem; }
+  main .productos .titulo-productos h2 {
+    text-align: center; }
+  main .productos .descripcion-productos .descripcion-productos-1 {
+    height: 28rem; }
+    main .productos .descripcion-productos .descripcion-productos-1 img {
+      width: 18rem;
+      height: 18rem; }
+  main .contacto-grids {
+    height: 90rem; }
+    main .contacto-grids .info-personal {
+      grid-template-rows: 10% repeat(2, 1fr) 25%; }
+    main .contacto-grids .formulario form fieldset {
+      width: 94%; }
+      main .contacto-grids .formulario form fieldset .formulario-grids {
+        grid-template-columns: 1fr;
+        grid-template-rows: 6.25rem repeat(2, 7.8125rem) 12.5rem 20rem; }
+        main .contacto-grids .formulario form fieldset .formulario-grids legend {
+          grid-row: 1 / 2;
+          grid-column: 1 / 2; }
+        main .contacto-grids .formulario form fieldset .formulario-grids .formulario-nombre {
+          grid-row: 2 / 3;
+          grid-column: 1 / 3; }
+        main .contacto-grids .formulario form fieldset .formulario-grids .formulario-email {
+          grid-row: 3 / 4;
+          grid-column: 1 / 3; }
+        main .contacto-grids .formulario form fieldset .formulario-grids .formulario-tipo-mensaje {
+          grid-row: 4 / 5;
+          grid-column: 1 / 3; }
+        main .contacto-grids .formulario form fieldset .formulario-grids .formulario-mensaje {
+          grid-row: 5 / 6;
+          grid-column: 1 / 3; }
+        main .contacto-grids .formulario form fieldset .formulario-grids .boton-enviar {
+          grid-row: 6 / 7;
+          grid-column: 1 / 3; } }
+
+@media (max-width: 320px) {
+  :is(h2) {
+    font-size: 1.4rem; }
+  header .navbar .titulo-header {
+    width: 75%; }
+    header .navbar .titulo-header p {
+      font-size: 2.15rem; }
+  header .navbar .menu img {
+    width: 1.25rem;
+    height: 1.25rem; }
+  footer {
+    display: grid;
+    grid-template: 15% repeat(3, 1fr) 20% 5%/1fr;
+    grid-template-areas: "contactenos" "iconos" "iconos" "iconos" "parrafo" "copy";
+    height: 50rem; }
+    footer .footer-iconos {
+      flex-flow: column nowrap; }
+  main .descripcion .text-descripcion .parrafo-descripcion p {
+    font-size: 1rem; }
+  main .descripcion button {
+    font-size: 1rem;
+    width: 12.25rem;
+    height: 2rem; }
+  main .descripcion .img-descripcion {
+    width: 20rem;
+    height: 20rem; }
+  main .nosotros .vid-des-nosotros .descripcion-nosotros p {
+    font-size: 1rem; }
+  main .lugar p {
+    text-align: center; }
+  main .lugar iframe {
+    height: 45vh; }
+  main .productos .descripcion-productos .descripcion-productos-1 {
+    grid-template-rows: 25% 10% 1fr; }
+    main .productos .descripcion-productos .descripcion-productos-1 img {
+      width: 14rem;
+      height: 14rem;
+      align-self: center; }
+  main .contacto-grids {
+    grid-template-columns: 1fr;
+    grid-template-rows: 8% 14% 1fr;
+    height: 74rem; }
+    main .contacto-grids .titulo-contacto h2 {
+      text-decoration: underline;
+      font-size: 1.8rem; }
+    main .contacto-grids .info-personal img {
+      width: 3.125rem; } }

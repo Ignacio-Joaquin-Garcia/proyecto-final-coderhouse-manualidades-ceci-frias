@@ -1,7 +1,8 @@
 footer{
     background-color: map-get($colores, color6);
-    @include grid-area(1fr 40% 1fr, 1fr 20%, "parrafo iconos contactenos""copy copy copy", 15.625rem);
+    @include grid-area(1fr 20%, 1fr 40% 1fr, "parrafo iconos contactenos""copy copy copy", 15.625rem);
     .footer-entregas{
+        grid-area: parrafo;
         @include align-self(center, center, center, 2.25rem);
         p{
             font-size: 2.25rem;
@@ -9,6 +10,7 @@ footer{
     }
     .footer-contactenos{
         @extend .footer-entregas;
+        grid-area: contactenos;
         a{
             color: map-get($colores, color12);
             text-decoration: underline map-get($colores, color3);
@@ -23,6 +25,7 @@ footer{
     .footer-iconos{
         @include flex(row, center, center, 3.125rem);
         width: 100%;
+        grid-area: iconos;
         a{
             img{
                 width: 6rem;

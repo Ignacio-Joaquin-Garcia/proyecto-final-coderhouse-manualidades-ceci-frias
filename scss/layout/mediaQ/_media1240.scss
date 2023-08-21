@@ -1,0 +1,71 @@
+@media (max-width: 1240px){
+    header{
+        .navbar{
+            .titulo-header{
+                h1{
+                    font-size: 2.4rem;
+                }
+            }
+            ul{
+                gap: 3rem;
+                li{
+                    a{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        .descripcion{
+            flex-direction: column;
+            .text-descripcion{
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 2rem;
+                gap: 0rem;
+                .titulo-descripcion{
+                    padding: 0rem;
+                }
+                .parrafo-descripcion{
+                    padding: 3rem 1rem;
+                }
+            }
+            .img-descripcion{
+                width: 100%;
+            }
+        }
+
+        .nosotros{
+            .vid-des-nosotros{
+                flex-wrap: wrap;
+                .video-nosotros{
+                    iframe{
+                        margin: 0;
+                        margin-bottom: 2rem;
+                    }
+                    
+                }
+                .descripcion-nosotros{
+                    width: 95%;
+                }
+            }
+        }
+
+        .productos{
+            .descripcion-productos{
+                grid-template-columns: repeat(2, 1fr);
+                .descripcion-productos-1{
+                    margin: 1rem 0;
+                }
+            }
+        }
+    }
+    
+
+    footer{
+        p{
+            font-size: 1.65rem;
+        }
+    }
+}

@@ -1,0 +1,114 @@
+@media (max-width:850px){
+    :is(h2) {
+        font-size: 2.25rem;
+    }
+    :is(h3){
+        font-size: 1.65rem;
+    }
+    footer{
+        @include grid-area(20% 30% 25% 1fr, 1fr, "contactenos""iconos""parrafo""copy", 32.75rem);
+        .footer-copy{
+            p{
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+    }
+
+    main{
+        .descripcion{
+            .text-descripcion{
+                .titulo-descripcion{
+                    h1{
+                        font-size: 2rem;
+                    }
+                }
+                .parrafo-descripcion{
+                    p{
+                        line-height: 2rem;
+                    }
+                    
+                }
+            }
+        }
+        .tipos-de-productos{
+            .t-prod-titulo-imagen{
+                padding-bottom: 1.875rem;
+            }
+        }
+        .dias-pedidos{
+            .iconos-d-pedidos{
+                width: 100%;
+            }
+        }
+    
+        .nosotros{
+            margin: 5rem 0rem;
+            .vid-des-nosotros{
+                .video-nosotros{
+                    width: 100%;
+                    iframe{
+                        width: 100%;
+                        height: 50vh;
+                    }
+                }
+            }
+        }
+        .lugar{
+            iframe{
+                width: 95%;
+                height: 65vh;
+            }
+        }
+
+        .productos{
+            .descripcion-productos{
+                grid-template-columns: 1fr;
+                .descripcion-productos-1{
+                    height: 45rem;
+                    img{
+                        width: 28rem;
+                        height: 28rem;
+                    }
+                }
+            }
+        }
+
+        .contacto-grids{
+            grid-template-columns: 1fr;
+            grid-template-rows: 10% 22% 1fr;
+            .info-personal{
+                grid-row: 2 / 3;
+                justify-items: center;
+                .telefono{
+                    padding-bottom: 10px;
+                }
+            }
+            .formulario{
+                grid-row: 3 / 4;
+                form{
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: center;
+                    fieldset{
+                        width: 100%;
+                        .formulario-grids{
+                            .formulario-mensaje{
+                                label{
+                                    textarea{
+                                        height: 15rem;
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        :is(.titulo-contacto, .telefono, .email, .formulario){
+            grid-column: 1 / 2;
+        }
+    }
+}

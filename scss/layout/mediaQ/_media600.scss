@@ -1,0 +1,86 @@
+@media (max-width:600px){
+    :is(h2) {
+        font-size: 2rem;
+    }
+    :is(h3){
+        font-size: 1.3rem;
+    }
+    :is(p, .footer-entregas) {
+        font-size: 1.35rem;
+    }
+    :is(.formulario-consultas, .formulario-pedidos, .formulario-productos, .formulario-otros) {
+        width: 65%;
+        }
+    :is(.formulario-nombre, .formulario-email, .formulario-mensaje label textarea) label input{
+        font-size: 1.25rem;
+    }
+    header{
+        .navbar{
+            .titulo-header{
+                width: 60%
+            }
+        }
+    }
+    footer{
+        height: 36rem;
+        .footer-copy{
+            text-align: center;
+            p{
+                font-size: 1.3rem;
+            }
+        }
+        .footer-contactenos{
+            font-size: 2.25rem;
+        }
+    }
+    main{
+        .descripcion{
+            .text-descripcion{
+                .titulo-descripcion{
+                    gap: 1.5rem;
+                    margin-left: 0.6rem;
+                    margin-right: 0.6rem;
+                    width: 96%;
+                    h1{
+                        font-size: 1.6rem;
+                    }
+                    img{
+                        width: 5rem;
+                        height: 5rem;
+                    }
+                }
+            }
+            .img-descripcion{
+                img{
+                    width: 30rem;
+                    height: 30rem;
+                }
+            }
+        }
+        .tipos-de-productos{
+            .t-prod-titulo-imagen{
+                img{
+                    width: 20rem;
+                    height: 20rem;
+                }
+            }
+        }
+        .dias-pedidos{
+            .iconos-d-pedidos{
+                img{
+                    width: 4.5rem;
+                }
+            }
+        }
+        .productos{
+            .descripcion-productos{
+                .descripcion-productos-1{
+                    height: 40rem;
+                    h3{
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
+}

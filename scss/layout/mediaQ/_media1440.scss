@@ -1,0 +1,26 @@
+@media (max-width: 1440px){
+    main{
+        .nosotros{
+            .vid-des-nosotros{
+                .descripcion-nosotros{
+                    width: 60%;
+                }
+            }
+        }
+        .productos{
+            .descripcion-productos{
+                .descripcion-productos-1{
+                    align-items: normal;
+                    height: 36rem;
+                    img{
+                        width: 25rem;
+                        height: 25rem;
+                        align-self: center;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+

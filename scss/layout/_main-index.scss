@@ -46,7 +46,7 @@
 
 .tipos-de-productos{
     @include flex(row, space-around, center, 0);
-    height: 650px;
+    flex-wrap: wrap;
     padding: 1.875rem 0;
     margin-bottom: 3.75rem;
     background-color: map-get($colores, color4);
@@ -73,7 +73,7 @@
 }
 
 .dias-pedidos{
-    @include flex(column, none, center, 0);
+    @include flex(column, center, center, 0);
     width: auto;
     margin: 8rem 0;
     .titulo-d-pedidos{
