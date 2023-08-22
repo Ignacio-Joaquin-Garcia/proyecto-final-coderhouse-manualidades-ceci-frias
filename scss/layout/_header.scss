@@ -37,6 +37,10 @@ header{
                         color: map-get($colores, color10);
                     }
                 }
+                &:hover{
+                    transform: scale(1.2);
+                    transition: 1s;
+                }
             }
         }
     }

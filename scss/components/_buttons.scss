@@ -29,3 +29,20 @@
         border: .35rem double map-get($colores, color11);
     }
 }
+
+aside{
+    .wpp{
+        top: 90vh;
+        position: fixed;
+        margin-right: 1.5rem;
+        right: 0;
+        img{
+            width: 4.5rem;
+            &:hover{
+                transform: scale(1.25);
+                transition: 1s;
+
+            }
+        }
+    }
+}
