@@ -16,9 +16,10 @@ footer{
             text-decoration: underline map-get($colores, color3);
             &:hover{
                 font-weight: 600;
+                color: map-get($colores, color10);
             }
             &:active{
-                color: map-get($colores, color11);
+                color: map-get($colores, color5);
             }
         }
     }

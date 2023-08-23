@@ -24,6 +24,9 @@
 
 .boton-enviar{
     @include font-buttons(map-get($colores, color5), 1.375rem, 6.5rem, 2.65rem, ('Hubballi', cursive), bold, .1875rem double map-get($colores, color11), 0);
+    color: map-get($colores, color12);
+    text-decoration: none;
+    text-align: center;
     &:hover{
         background-color: map-get($colores, color8);
         border: .35rem double map-get($colores, color11);

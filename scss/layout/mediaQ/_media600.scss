@@ -36,6 +36,13 @@
     main{
         .descripcion{
             .text-descripcion{
+                .boton-descripcion{
+                    button{
+                        width: 14rem;
+                        height: 2.5rem;
+                        font-size: 1.2rem;
+                    }
+                }
                 .titulo-descripcion{
                     gap: 1.5rem;
                     margin-left: 0.6rem;
@@ -83,9 +90,12 @@
             }
         }
         .wpp{
+            top: 85vh;
             img{
-                width: 3rem;
+                width: 3.5rem;
             }
         }
+
+        
     }
 }

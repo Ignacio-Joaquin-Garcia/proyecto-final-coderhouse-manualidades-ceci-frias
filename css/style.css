@@ -224,9 +224,10 @@ footer {
       color: black;
       text-decoration: underline #816FB3; }
       footer .footer-contactenos a:hover {
-        font-weight: 600; }
+        font-weight: 600;
+        color: #ba18c0; }
       footer .footer-contactenos a:active {
-        color: #FFF392; }
+        color: #C8B6FF; }
   footer .footer-iconos {
     display: flex;
     flex-direction: row;
@@ -573,7 +574,10 @@ footer {
   font-family: "Hubballi", cursive;
   font-weight: bold;
   border: 0.1875rem double #FFF392;
-  border-radius: 0; }
+  border-radius: 0;
+  color: black;
+  text-decoration: none;
+  text-align: center; }
   .boton-enviar:hover {
     background-color: #aa56f3;
     border: 0.35rem double #FFF392; }
@@ -715,6 +719,10 @@ aside .wpp {
         font-size: 1.3rem; }
     footer .footer-contactenos {
       font-size: 2.25rem; }
+  main .descripcion .text-descripcion .boton-descripcion button {
+    width: 14rem;
+    height: 2.5rem;
+    font-size: 1.2rem; }
   main .descripcion .text-descripcion .titulo-descripcion {
     gap: 1.5rem;
     margin-left: 0.6rem;
@@ -737,8 +745,10 @@ aside .wpp {
     height: 40rem; }
     main .productos .descripcion-productos .descripcion-productos-1 h3 {
       align-self: center; }
-  main .wpp img {
-    width: 3rem; } }
+  main .wpp {
+    top: 85vh; }
+    main .wpp img {
+      width: 3.5rem; } }
 
 @media (max-width: 480px) {
   :is(h2) {
