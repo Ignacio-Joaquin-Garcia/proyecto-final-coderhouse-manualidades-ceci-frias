@@ -27,19 +27,30 @@
         }
     }
     footer{
-        @include grid-area(15% repeat(3, 1fr) 20% 15%, 1fr, "contactenos""iconos""iconos""iconos""parrafo""copy", 50rem);
+        @include grid-area(15% repeat(3, 1fr) 20% 15%, 1fr, "contactenos""iconos""iconos""iconos""parrafo""copy", 40rem);
         .footer-iconos{
             flex-flow: column nowrap;
-        }
-        .footer-iconos{
             gap: 2rem;
-            img{
-                width: 5rem;
+            a{
+                img{
+                    width: 4rem;
+                }
+            }
+            
+        }
+        .footer-contactenos{
+            a{
+                font-size: 1.8rem;
             }
         }
         .footer-entregas{
             p{
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+            }
+        }
+        .footer-copy{
+            p{
+                font-size: 1rem;
             }
         }
     }
@@ -108,7 +119,7 @@
             }
         }
         .contacto-grids{
-            height: 101rem;
+            height: 90rem;
             grid-template-rows: 8% 28% 1fr;
             .info-personal{
                 grid-template-rows: 1% repeat(2, 1fr) 5%;

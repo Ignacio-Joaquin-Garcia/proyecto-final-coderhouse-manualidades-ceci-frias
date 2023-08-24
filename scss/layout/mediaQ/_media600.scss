@@ -75,7 +75,7 @@
         .dias-pedidos{
             .iconos-d-pedidos{
                 img{
-                    width: 4.5rem;
+                    width: 4rem;
                 }
             }
         }
@@ -114,6 +114,15 @@
                     a{
                         font-size: 1.4rem;
                     }
+                }
+            }
+        }
+        .taller{
+            .p-v-nosotros{
+                width: 95%;
+                height: 60vh;
+                iframe{
+                    height: 50%;
                 }
             }
         }
