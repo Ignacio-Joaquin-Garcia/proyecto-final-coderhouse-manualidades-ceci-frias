@@ -1,11 +1,88 @@
+$grados-rotacion1: -12deg;
+$grados-rotacion2: 12deg;
+
 .p-404{
+    margin-top: 2.5rem;
     h1{
-        font-size: 2.5rem;
+        font-size: 3.5rem;
+        margin-bottom: 4rem;
+        text-decoration: underline;
     }
     .p-img{
+        img{
+            height: 30rem;
+        }
+        .p-img1{
+            animation-name: pagina404-1;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-duration: 6s;
+            animation-delay: 0.5s;
+        }
         
-        width: 1rem;
-        height: 2rem;
-        
+        .p-img3{
+            animation-name: pagina404-2;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-duration: 6s;
+            animation-delay: 0.5s;
+        }
+    }
+    p{
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+.navega-404{
+    ul{
+        margin: 5rem 0;
+        margin-bottom: 15rem;
+        list-style: none;
+        li{
+            a{
+                color: map-get($colores, color9);
+                font-weight: bold;
+                font-size: 2rem;
+                font-family: ('Indie Flower', cursive);
+                &:hover{
+                    color: map-get($colores, color4);
+                    transition: 1s;
+                }
+            }
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+@keyframes pagina404-1{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate($grados-rotacion1);
+        transition: 2s;
+    }
+    50%{
+        transform: rotate(10deg);
+        transform: scale(1.1);
+        transition: 3s;
+    }
+}
+@keyframes pagina404-2{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate($grados-rotacion2);
+        transition: 2s;
+    }
+    50%{
+        transform: rotate(-10deg);
+        transform: scale(1.1);
+        transition: 3s;
     }
 }

@@ -9,7 +9,7 @@ header{
         .titulo-header{
             width: 20%;
             p{
-                @include font(none, ('Dancing Script', cursive), 2.8125rem, bold, 2.5rem, center, map-get($colores, color10));
+                @include font(none, ('Dancing Script', cursive), 2.8125rem, bold, 2.5rem, center, map-get($colores, color9));
             }
         }
         .menu{
@@ -22,7 +22,7 @@ header{
         .offcanvas-header{
             background-color: map-get($colores, color7);
             h5{
-                @include font(none, ('Dancing Script', cursive), 2rem, bold, 2.5rem, center, map-get($colores, color10));
+                @include font(none, ('Dancing Script', cursive), 2rem, bold, 2.5rem, center, map-get($colores, color9));
                 
             }
         }
@@ -35,6 +35,7 @@ header{
                     @include font(none, ('Dancing Script', cursive), 2.25rem, bold, normal, center, map-get($colores, color9));
                     &:hover{
                         color: map-get($colores, color10);
+                        transition: 1s
                     }
                 }
                 &:hover{

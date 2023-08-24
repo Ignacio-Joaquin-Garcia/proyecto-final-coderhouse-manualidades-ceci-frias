@@ -5,24 +5,21 @@
     header{
         .navbar{
             .titulo-header{
-                width: 70%;
+                width: 60%;
                 p{
-                    font-size: 1.8rem;
+                    font-size: 1.6rem;
                 }
             }
             .menu{
                 img{
-                    width: 2rem;
-                    height: 2rem;
+                    width: 1.65rem;
+                    height: 1.65rem;
                 }
             }
         }
     }
     footer{
-        @include grid-area(15% repeat(3, 1fr) 20% 5%, 1fr, "contactenos""iconos""iconos""iconos""parrafo""copy", 50rem);
-        .footer-iconos{
-            flex-flow: column nowrap;
-        }
+        height: 62rem;
     }
     main{
         .descripcion{
@@ -78,8 +75,6 @@
         }
         .contacto-grids{
             grid-template-columns: 1fr;
-            grid-template-rows: 8% 14% 1fr;
-            height: 74rem;
             .titulo-contacto{
                 h2{
                     text-decoration: underline;
@@ -87,8 +82,31 @@
                 }
             }
             .info-personal{
+                .telefono{
+                    .info-personal-fila{
+                        h3{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+                .email{
+                    .info-personal-fila{
+                        h3{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+                
                 img{
                     width: 3.125rem;
+                }
+            }
+        }
+        
+        .p-404{
+            .p-img{
+                img{
+                    height: 6rem;
                 }
             }
         }

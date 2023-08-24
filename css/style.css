@@ -46,7 +46,7 @@ header {
       font-weight: bold;
       line-height: 2.5rem;
       text-align: center;
-      color: #ba18c0; }
+      color: #5213f0cf; }
   header .navbar .menu {
     border: none; }
     header .navbar .menu img {
@@ -61,7 +61,7 @@ header {
       font-weight: bold;
       line-height: 2.5rem;
       text-align: center;
-      color: #ba18c0; }
+      color: #5213f0cf; }
   header .navbar ul {
     list-style: none;
     gap: 4.4rem;
@@ -73,9 +73,10 @@ header {
       font-weight: bold;
       line-height: normal;
       text-align: center;
-      color: #c54de3; }
+      color: #5213f0cf; }
       header .navbar ul li a:hover {
-        color: #ba18c0; }
+        color: #ba18c0;
+        transition: 1s; }
     header .navbar ul li:hover {
       transform: scale(1.2);
       transition: 1s; }
@@ -225,9 +226,13 @@ footer {
       text-decoration: underline #816FB3; }
       footer .footer-contactenos a:hover {
         font-weight: 600;
-        color: #ba18c0; }
+        color: #ba18c0;
+        transition: 1s; }
       footer .footer-contactenos a:active {
         color: #C8B6FF; }
+    footer .footer-contactenos:hover {
+      transform: scale(1.2);
+      transition: 0.5s; }
   footer .footer-iconos {
     display: flex;
     flex-direction: row;
@@ -239,7 +244,7 @@ footer {
     footer .footer-iconos a img {
       width: 6rem; }
       footer .footer-iconos a img:hover {
-        scale: 1.2; }
+        transform: scale(1.2); }
   footer .footer-copy {
     grid-area: copy;
     align-self: end;
@@ -545,6 +550,69 @@ footer {
 :is(.formulario-consultas, .formulario-pedidos, .formulario-productos, .formulario-otros) input {
   grid-column: 2 / 3; }
 
+.p-404 {
+  margin-top: 2.5rem; }
+  .p-404 h1 {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+    text-decoration: underline; }
+  .p-404 .p-img img {
+    height: 30rem; }
+  .p-404 .p-img .p-img1 {
+    animation-name: pagina404-1;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-duration: 6s;
+    animation-delay: 0.5s; }
+  .p-404 .p-img .p-img3 {
+    animation-name: pagina404-2;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-duration: 6s;
+    animation-delay: 0.5s; }
+  .p-404 p {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    font-size: 2rem; }
+
+.navega-404 ul {
+  margin: 5rem 0;
+  margin-bottom: 15rem;
+  list-style: none; }
+  .navega-404 ul li a {
+    color: #5213f0cf;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: "Indie Flower", cursive; }
+    .navega-404 ul li a:hover {
+      color: #B8C0FF;
+      transition: 1s; }
+  .navega-404 ul li:hover {
+    transform: scale(1.2); }
+
+@keyframes pagina404-1 {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(-12deg);
+    transition: 2s; }
+  50% {
+    transform: rotate(10deg);
+    transform: scale(1.1);
+    transition: 3s; } }
+
+@keyframes pagina404-2 {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(12deg);
+    transition: 2s; }
+  50% {
+    transform: rotate(-10deg);
+    transform: scale(1.1);
+    transition: 3s; } }
+
 /* Importamos componentes */
 .descripcion .text-descripcion .boton-descripcion button {
   background-color: #FFF392;
@@ -562,9 +630,9 @@ footer {
       color: white; }
   .descripcion .text-descripcion .boton-descripcion button:hover {
     background-color: #C8B6FF;
-    border-color: #c54de3; }
+    border-color: #5213f0cf; }
   .descripcion .text-descripcion .boton-descripcion button:active {
-    background-color: #c54de3; }
+    background-color: #5213f0cf; }
 
 .boton-enviar {
   background-color: #C8B6FF;
@@ -695,6 +763,16 @@ aside .wpp {
           width: 100%; }
           main .contacto-grids .formulario form fieldset .formulario-grids .formulario-mensaje label textarea {
             height: 15rem; }
+  main .p-404 h1 {
+    font-size: 2rem; }
+  main .p-404 .p-img img {
+    height: 20rem; }
+  main .p-404 p {
+    font-size: 1.25rem; }
+  main .navega-404 ul li {
+    text-align: center; }
+    main .navega-404 ul li a {
+      font-size: 1.5rem; }
   main :is(.titulo-contacto, .telefono, .email, .formulario) {
     grid-column: 1 / 2; } }
 
@@ -748,7 +826,15 @@ aside .wpp {
   main .wpp {
     top: 85vh; }
     main .wpp img {
-      width: 3.5rem; } }
+      width: 3.5rem; }
+  main .p-404 h1 {
+    font-size: 1.75rem; }
+  main .p-404 .p-img img {
+    height: 12rem; }
+  main .p-404 p {
+    font-size: 1rem; }
+  main .navega-404 ul li a {
+    font-size: 1.4rem; } }
 
 @media (max-width: 480px) {
   :is(h2) {
@@ -764,12 +850,19 @@ aside .wpp {
   header .navbar .menu img {
     width: 2rem;
     height: 2rem; }
-  footer .footer-iconos {
-    gap: 2rem; }
-    footer .footer-iconos img {
-      width: 5rem; }
-  footer .footer-entregas p, footer .footer-contactenos p {
-    font-size: 1.8rem; }
+  footer {
+    display: grid;
+    grid-template: 15% repeat(3, 1fr) 20% 15%/1fr;
+    grid-template-areas: "contactenos" "iconos" "iconos" "iconos" "parrafo" "copy";
+    height: 50rem; }
+    footer .footer-iconos {
+      flex-flow: column nowrap; }
+    footer .footer-iconos {
+      gap: 2rem; }
+      footer .footer-iconos img {
+        width: 5rem; }
+    footer .footer-entregas p, footer .footer-contactenos p {
+      font-size: 1.8rem; }
   main .descripcion .text-descripcion img {
     display: none; }
   main .descripcion .text-descripcion .parrafo-descripcion {
@@ -800,50 +893,59 @@ aside .wpp {
       width: 18rem;
       height: 18rem; }
   main .contacto-grids {
-    height: 90rem; }
+    height: 101rem;
+    grid-template-rows: 8% 28% 1fr; }
     main .contacto-grids .info-personal {
-      grid-template-rows: 10% repeat(2, 1fr) 25%; }
-    main .contacto-grids .formulario form fieldset {
-      width: 94%; }
-      main .contacto-grids .formulario form fieldset .formulario-grids {
-        grid-template-columns: 1fr;
-        grid-template-rows: 6.25rem repeat(2, 7.8125rem) 12.5rem 20rem; }
-        main .contacto-grids .formulario form fieldset .formulario-grids legend {
-          grid-row: 1 / 2;
-          grid-column: 1 / 2; }
-        main .contacto-grids .formulario form fieldset .formulario-grids .formulario-nombre {
-          grid-row: 2 / 3;
-          grid-column: 1 / 3; }
-        main .contacto-grids .formulario form fieldset .formulario-grids .formulario-email {
-          grid-row: 3 / 4;
-          grid-column: 1 / 3; }
-        main .contacto-grids .formulario form fieldset .formulario-grids .formulario-tipo-mensaje {
-          grid-row: 4 / 5;
-          grid-column: 1 / 3; }
-        main .contacto-grids .formulario form fieldset .formulario-grids .formulario-mensaje {
-          grid-row: 5 / 6;
-          grid-column: 1 / 3; }
-        main .contacto-grids .formulario form fieldset .formulario-grids .boton-enviar {
-          grid-row: 6 / 7;
-          grid-column: 1 / 3; } }
+      grid-template-rows: 1% repeat(2, 1fr) 5%;
+      grid-template-columns: 1fr 95% 1fr; }
+      main .contacto-grids .info-personal .telefono .info-personal-fila {
+        flex-flow: wrap column; }
+      main .contacto-grids .info-personal .email .info-personal-fila {
+        flex-flow: wrap column; }
+    main .contacto-grids .formulario {
+      padding: 0; }
+      main .contacto-grids .formulario form fieldset {
+        width: 94%; }
+        main .contacto-grids .formulario form fieldset .formulario-grids {
+          grid-template-columns: 1fr;
+          grid-template-rows: 6.25rem repeat(2, 7.8125rem) 12.5rem 20rem; }
+          main .contacto-grids .formulario form fieldset .formulario-grids legend {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2; }
+          main .contacto-grids .formulario form fieldset .formulario-grids .formulario-nombre {
+            grid-row: 2 / 3;
+            grid-column: 1 / 3; }
+          main .contacto-grids .formulario form fieldset .formulario-grids .formulario-email {
+            grid-row: 3 / 4;
+            grid-column: 1 / 3; }
+          main .contacto-grids .formulario form fieldset .formulario-grids .formulario-tipo-mensaje {
+            grid-row: 4 / 5;
+            grid-column: 1 / 3; }
+          main .contacto-grids .formulario form fieldset .formulario-grids .formulario-mensaje {
+            grid-row: 5 / 6;
+            grid-column: 1 / 3; }
+          main .contacto-grids .formulario form fieldset .formulario-grids .boton-enviar {
+            grid-row: 6 / 7;
+            grid-column: 1 / 3; }
+  main .navega-404 ul {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-content: center;
+    padding: 0; } }
 
 @media (max-width: 320px) {
   :is(h2) {
     font-size: 1.4rem; }
   header .navbar .titulo-header {
-    width: 70%; }
+    width: 60%; }
     header .navbar .titulo-header p {
-      font-size: 1.8rem; }
+      font-size: 1.6rem; }
   header .navbar .menu img {
-    width: 2rem;
-    height: 2rem; }
+    width: 1.65rem;
+    height: 1.65rem; }
   footer {
-    display: grid;
-    grid-template: 15% repeat(3, 1fr) 20% 5%/1fr;
-    grid-template-areas: "contactenos" "iconos" "iconos" "iconos" "parrafo" "copy";
-    height: 50rem; }
-    footer .footer-iconos {
-      flex-flow: column nowrap; }
+    height: 62rem; }
   main .descripcion .text-descripcion .parrafo-descripcion p {
     font-size: 1rem; }
   main .descripcion button {
@@ -867,11 +969,15 @@ aside .wpp {
       height: 14rem;
       align-self: center; }
   main .contacto-grids {
-    grid-template-columns: 1fr;
-    grid-template-rows: 8% 14% 1fr;
-    height: 74rem; }
+    grid-template-columns: 1fr; }
     main .contacto-grids .titulo-contacto h2 {
       text-decoration: underline;
       font-size: 1.8rem; }
+    main .contacto-grids .info-personal .telefono .info-personal-fila h3 {
+      font-size: 1.4rem; }
+    main .contacto-grids .info-personal .email .info-personal-fila h3 {
+      font-size: 1.4rem; }
     main .contacto-grids .info-personal img {
-      width: 3.125rem; } }
+      width: 3.125rem; }
+  main .p-404 .p-img img {
+    height: 6rem; } }

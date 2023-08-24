@@ -27,6 +27,10 @@
         }
     }
     footer{
+        @include grid-area(15% repeat(3, 1fr) 20% 15%, 1fr, "contactenos""iconos""iconos""iconos""parrafo""copy", 50rem);
+        .footer-iconos{
+            flex-flow: column nowrap;
+        }
         .footer-iconos{
             gap: 2rem;
             img{
@@ -104,11 +108,26 @@
             }
         }
         .contacto-grids{
-            height: 90rem;
+            height: 101rem;
+            grid-template-rows: 8% 28% 1fr;
             .info-personal{
-                grid-template-rows: 10% repeat(2, 1fr) 25%;
+                grid-template-rows: 1% repeat(2, 1fr) 5%;
+                grid-template-columns: 1fr 95% 1fr;
+
+                .telefono{
+                    .info-personal-fila{
+                        flex-flow: wrap column;
+                    }
+                }
+                .email{
+                    .info-personal-fila{
+                        flex-flow: wrap column;
+                    }
+                }
+                
             }
             .formulario{
+                padding: 0;
                 form{
                     fieldset{
                         width: 94%;
@@ -142,6 +161,15 @@
                         }
                     }
                 }
+            }
+        }
+        .navega-404{
+            ul{
+                display: flex;
+                flex-flow: wrap column;
+                justify-content: center;
+                align-content: center;
+                padding: 0;
             }
         }
     }
