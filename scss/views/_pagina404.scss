@@ -11,6 +11,7 @@ $grados-rotacion2: 12deg;
     .p-img{
         img{
             height: 30rem;
+            animation-timeline: unset; 
         }
         .p-img1{
             animation-name: pagina404-1;

@@ -19,3 +19,24 @@
 p{
     margin: 0rem;
 }
+
+img{
+    view-timeline-name: --revealing-image;
+    view-timeline-axis: block;
+    animation-name: show;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-timeline: --revealing-image;
+    animation-range: entry 25% cover 50%;
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}

@@ -29,6 +29,23 @@
 p {
   margin: 0rem; }
 
+img {
+  view-timeline-name: --revealing-image;
+  view-timeline-axis: block;
+  animation-name: show;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  animation-timeline: --revealing-image;
+  animation-range: entry 25% cover 50%; }
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%; }
+  to {
+    opacity: 1;
+    scale: 100%; } }
+
 /*  Importamos el Layout  */
 header {
   position: sticky;
@@ -36,7 +53,10 @@ header {
   opacity: 88%;
   height: 7rem;
   background-color: #f9e1f9;
-  z-index: 1000; }
+  z-index: 1000;
+  animation: adjust-header linear both;
+  animation-timeline: scroll();
+  animation-range: 0 15.625rem; }
   header .navbar .titulo-header {
     width: 20%; }
     header .navbar .titulo-header p {
@@ -51,7 +71,8 @@ header {
     border: none; }
     header .navbar .menu img {
       width: 3rem;
-      height: 3rem; }
+      height: 3rem;
+      animation: none; }
   header .navbar .offcanvas-header {
     background-color: #f9e1f9; }
     header .navbar .offcanvas-header h5 {
@@ -80,6 +101,11 @@ header {
     header .navbar ul li:hover {
       transform: scale(1.2);
       transition: 1s; }
+
+@keyframes adjust-header {
+  to {
+    height: 6.25rem;
+    backdrop-filter: blur(1.875rem); } }
 
 .background img {
   width: 100%;
@@ -242,7 +268,8 @@ footer {
     width: 100%;
     grid-area: iconos; }
     footer .footer-iconos a img {
-      width: 6rem; }
+      width: 6rem;
+      animation: none; }
       footer .footer-iconos a img:hover {
         transform: scale(1.2); }
   footer .footer-copy {
@@ -558,7 +585,8 @@ footer {
     margin-bottom: 4rem;
     text-decoration: underline; }
   .p-404 .p-img img {
-    height: 30rem; }
+    height: 30rem;
+    animation-timeline: unset; }
   .p-404 .p-img .p-img1 {
     animation-name: pagina404-1;
     animation-iteration-count: infinite;
@@ -677,12 +705,14 @@ aside .wpp {
     width: 90%; } }
 
 @media (max-width: 1240px) {
-  header .navbar .titulo-header h1 {
-    font-size: 2.4rem; }
-  header .navbar ul {
-    gap: 3rem; }
-    header .navbar ul li a {
-      font-size: 2rem; }
+  header {
+    animation: none; }
+    header .navbar .titulo-header h1 {
+      font-size: 2.4rem; }
+    header .navbar ul {
+      gap: 3rem; }
+      header .navbar ul li a {
+        font-size: 2rem; }
   main .descripcion {
     flex-direction: column; }
     main .descripcion .text-descripcion {
@@ -767,7 +797,7 @@ aside .wpp {
           main .contacto-grids .formulario form fieldset .formulario-grids .formulario-mensaje label textarea {
             height: 15rem; }
   main .p-404 h1 {
-    font-size: 2rem; }
+    font-size: 2.75rem; }
   main .p-404 .p-img img {
     height: 20rem; }
   main .p-404 p {
@@ -831,11 +861,11 @@ aside .wpp {
     main .wpp img {
       width: 3.5rem; }
   main .p-404 h1 {
-    font-size: 1.75rem; }
+    font-size: 2.25rem; }
   main .p-404 .p-img img {
     height: 12rem; }
   main .p-404 p {
-    font-size: 1rem; }
+    font-size: 1.25rem; }
   main .navega-404 ul li a {
     font-size: 1.4rem; }
   main .taller .p-v-nosotros {
