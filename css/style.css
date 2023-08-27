@@ -187,7 +187,8 @@ header {
       width: 28.125rem;
       height: 28.125rem;
       border-radius: 50%;
-      object-fit: cover; }
+      object-fit: cover;
+      animation-timeline: unset; }
       .tipos-de-productos .t-prod-titulo-imagen img:hover {
         animation-name: t-img;
         animation-iteration-count: 1;

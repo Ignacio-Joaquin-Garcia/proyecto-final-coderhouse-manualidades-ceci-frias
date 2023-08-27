@@ -59,6 +59,7 @@
         }
         img{
             @include img-circular($t-prod-img);
+            animation-timeline: unset;
             &:hover{
                 animation-name: t-img;
                 animation-iteration-count: 1;
