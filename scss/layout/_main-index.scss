@@ -64,7 +64,7 @@
                 animation-name: t-img;
                 animation-iteration-count: 1;
                 animation-timing-function: ease-in-out;
-                animation-duration: 8s;
+                animation-duration: 4s;
                 animation-delay: 0s;
             }
         }
@@ -93,14 +93,17 @@
     }
     10%{
         border-radius: 40%;
+        transition: .5s;
     }
     25%{
         transform: scale(1.2);
         border-radius: 25%;
+        transition: 1.25s;
     }
     50%{
         border-radius: 15%;
         transform: scale(1.25);
+        transition: 1.75s;
     }
     75%{
         border-radius: 5%;

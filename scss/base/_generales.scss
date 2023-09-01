@@ -29,7 +29,6 @@ img{
     animation-timeline: --revealing-image;
     animation-range: entry 25% cover 50%;
 }
-
 @keyframes show{
     from{
         opacity: 0;
@@ -40,3 +39,19 @@ img{
         scale: 100%;
     }
 }
+
+main{
+    animation-name: square-in-bottom-right;
+    animation-duration: 1.75s;
+}
+@keyframes square-in-bottom-right {
+    from {
+        clip-path: inset(0 100% 100% 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+    [transition-style="in:square:bottom-right"] {
+        animation: 1.25s cubic-bezier(.25, 1, .30, 1) square-in-bottom-right both;
+    }

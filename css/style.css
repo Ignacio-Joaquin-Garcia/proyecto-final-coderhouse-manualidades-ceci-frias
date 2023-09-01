@@ -46,6 +46,19 @@ img {
     opacity: 1;
     scale: 100%; } }
 
+main {
+  animation-name: square-in-bottom-right;
+  animation-duration: 1.75s; }
+
+@keyframes square-in-bottom-right {
+  from {
+    clip-path: inset(0 100% 100% 0); }
+  to {
+    clip-path: inset(0 0 0 0); } }
+
+[transition-style="in:square:bottom-right"] {
+  animation: 1.25s cubic-bezier(0.25, 1, 0.3, 1) square-in-bottom-right both; }
+
 /*  Importamos el Layout  */
 header {
   position: sticky;
@@ -193,7 +206,7 @@ header {
         animation-name: t-img;
         animation-iteration-count: 1;
         animation-timing-function: ease-in-out;
-        animation-duration: 8s;
+        animation-duration: 4s;
         animation-delay: 0s; }
 
 .dias-pedidos {
@@ -220,13 +233,16 @@ header {
   0% {
     transform: scale(1.1); }
   10% {
-    border-radius: 40%; }
+    border-radius: 40%;
+    transition: .5s; }
   25% {
     transform: scale(1.2);
-    border-radius: 25%; }
+    border-radius: 25%;
+    transition: 1.25s; }
   50% {
     border-radius: 15%;
-    transform: scale(1.25); }
+    transform: scale(1.25);
+    transition: 1.75s; }
   75% {
     border-radius: 5%; }
   100% {
